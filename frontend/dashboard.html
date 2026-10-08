@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Researcher evaluation, Deep Knowledge Tracing (DKT), and student learning analytics for the AI Tutor platform.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <title>Analytics Dashboard | AI Tutor Platform</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>🎓 Personalized AI Tutor Platform</h1>
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="study.html">Study Hub</a>
+                <a href="flashcards.html">Flashcards</a>
+                <a href="tutor.html">Tutor</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+            </nav>
+            <div class="game-hud">
+                <button class="sound-toggle-btn hud-chip" style="cursor:pointer;border:none;" onclick="SoundFX.toggleMute()">🔊 Sound ON</button>
+                <span id="hud-streak" class="hud-chip">🔥 0</span>
+                <span id="hud-xp" class="hud-chip">⚡ 0 XP</span>
+                <span id="hud-level" class="hud-level-badge">🌱 NOVICE</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Dashboard Tab Switcher -->
+        <div style="display:flex;gap:1rem;margin-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:1rem;flex-wrap:wrap;">
+            <button class="btn btn-primary" id="tab-student-btn" style="font-size:0.85rem;padding:0.6rem 1.2rem;">👤 My Student Analytics</button>
+            <button class="btn btn-secondary" id="tab-researcher-btn" style="font-size:0.85rem;padding:0.6rem 1.2rem;">🔬 Researcher &amp; ML Evaluation</button>
+        </div>
+
+        <!-- ================= STUDENT VIEW ================= -->
+        <div id="student-view-section">
+            <h2 style="margin-bottom:0.5rem;font-weight:700;">Student Learning Overview</h2>
+            <p style="color:var(--text-muted);margin-bottom:2rem;">Your personalized skill growth, daily streaks, XP progression, and topic mastery profile across all domains.</p>
+
+            <div class="stats-grid" style="margin-bottom:2rem;">
+                <div class="stat-card">
+                    <div class="num" id="s-stat-xp" style="color:var(--primary);">⚡ 0</div>
+                    <div class="label">Total XP Earned</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num" id="s-stat-streak" style="color:var(--warning);">🔥 0</div>
+                    <div class="label">Day Streak</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num" id="s-stat-level" style="color:var(--secondary);">🌱 NOVICE</div>
+                    <div class="label">Current Rank</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num" id="s-stat-accuracy" style="color:var(--success);">0%</div>
+                    <div class="label">Overall Accuracy</div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid" style="margin-bottom:2rem;">
+                <div class="card">
+                    <h4 style="margin-top:0;font-weight:700;">Your Subject Mastery Radar</h4>
+                    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;">Real-time Bayesian Knowledge Tracing scores per subject (0% to 100%).</p>
+                    <div class="chart-container">
+                        <canvas id="student-radar-chart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4 style="margin-top:0;font-weight:700;">Recent Practice Sessions</h4>
+                    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;">Your completed question sets logged from the interactive tutor.</p>
+                    <div id="student-history-table" style="max-height:280px;overflow-y:auto;font-size:0.85rem;display:flex;flex-direction:column;gap:0.5rem;">
+                        <div style="color:var(--text-muted);font-style:italic;">No session history yet. Complete a quiz in the Tutor!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= RESEARCHER VIEW ================= -->
+        <div id="researcher-view-section" style="display:none;">
+            <h2 style="margin-bottom:0.5rem;font-weight:700;">Researcher &amp; Evaluation Panel</h2>
+            <p style="color:var(--text-muted);margin-bottom:2rem;">Evaluate Item Response Theory (1-PL Rasch), Deep Knowledge Tracing (DKT Recurrent Neural Networks), and Reinforcement Learning tutoring policies (Q-learning, DQN) on the 20,000 ASSISTments benchmark interactions.</p>
+
+            <!-- Step 1: Dataset Loader -->
+            <div class="card">
+                <h3 style="margin-top:0;font-weight:700;">1. ASSISTments Dataset Calibration</h3>
+                <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;">
+                    Preprocesses the official 2009-2010 ASSISTments Skill Builder benchmark (20,000 interactions across 150 students and 500 problems), fits 1-PL IRT item difficulties ($\beta_j$), and calculates empirical BKT transition probabilities.
+                </p>
+                <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+                    <button class="btn btn-primary" id="setup-data-btn">Download &amp; Calibrate Dataset</button>
+                    <span id="data-status-text" style="font-weight:600;color:var(--text-muted);">Checking data status...</span>
+                </div>
+            </div>
+
+            <!-- Step 2: Dataset Stats -->
+            <div id="dataset-stats-section" style="display:none;margin-bottom:2rem;">
+                <div class="stats-grid">
+                    <div class="stat-card"><div class="num" id="stat-total-interactions">-</div><div class="label">Total Logs / Responses</div></div>
+                    <div class="stat-card"><div class="num" id="stat-total-students">-</div><div class="label">Unique Students</div></div>
+                    <div class="stat-card"><div class="num" id="stat-total-skills">-</div><div class="label">Knowledge Components</div></div>
+                    <div class="stat-card"><div class="num" id="stat-avg-correctness">-</div><div class="label">Mean Raw Accuracy</div></div>
+                </div>
+
+                <div class="dashboard-grid" style="margin-bottom:2rem;">
+                    <div class="card">
+                        <h4 style="margin-top:0;font-weight:700;">IRT Problem Difficulty Levels</h4>
+                        <div class="chart-container"><canvas id="difficulty-dist-chart"></canvas></div>
+                    </div>
+                    <div class="card">
+                        <h4 style="margin-top:0;font-weight:700;">Student Performance Distribution</h4>
+                        <div class="chart-container"><canvas id="performance-dist-chart"></canvas></div>
+                    </div>
+                </div>
+
+                <!-- Empirical BKT Parameters Matrix -->
+                <div class="card" style="margin-bottom:2rem;">
+                    <h4 style="margin-top:0;font-weight:700;">Empirical Bayesian Knowledge Tracing (BKT) Parameters per Skill</h4>
+                    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;">Fitted from 20,000 real student interaction sequences: initial mastery $P_{init}$, learn rate $P_{transit}$, slip $P_{slip}$, guess $P_{guess}$, and median response latency.</p>
+                    <div style="overflow-x:auto;">
+                        <table style="width:100%;border-collapse:collapse;font-size:0.85rem;text-align:left;">
+                            <thead>
+                                <tr style="border-bottom:1px solid rgba(255,255,255,0.1);color:var(--secondary);">
+                                    <th style="padding:0.75rem 0.5rem;">Skill / Knowledge Component</th>
+                                    <th style="padding:0.75rem 0.5rem;">P(Initial Mastery)</th>
+                                    <th style="padding:0.75rem 0.5rem;">P(Transition / Learn)</th>
+                                    <th style="padding:0.75rem 0.5rem;">P(Slip)</th>
+                                    <th style="padding:0.75rem 0.5rem;">P(Guess)</th>
+                                    <th style="padding:0.75rem 0.5rem;">Median Latency</th>
+                                </tr>
+                            </thead>
+                            <tbody id="empirical-bkt-tbody">
+                                <tr><td colspan="6" style="padding:1rem;color:var(--text-muted);text-align:center;">Loading empirical parameter matrix...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Item Characteristic Curves (ICC) -->
+                <div class="card" style="margin-bottom:2rem;">
+                    <h4 style="margin-top:0;font-weight:700;">Item Response Theory: Item Characteristic Curves (ICC)</h4>
+                    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;">Probability of correct answer $P(\text{correct} \mid \theta) = \frac{1}{1 + e^{-(\theta - \beta)}}$ mapped across student latent ability spectrum $\theta \in [-3.0, +3.0]$.</p>
+                    <div class="chart-container" style="height:320px;">
+                        <canvas id="icc-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Deep Knowledge Tracing (DKT) Neural Network Section -->
+            <div class="card" style="margin-bottom:2rem;">
+                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;">
+                    <div>
+                        <h3 style="margin:0;font-weight:700;">2. Deep Knowledge Tracing (DKT) RNN Evaluation</h3>
+                        <p style="color:var(--text-muted);font-size:0.9rem;margin:0.25rem 0 0;">
+                            Trains a recurrent neural network on student interaction sequences $[(k_1, y_1), \dots, (k_t, y_t)]$ to predict multi-skill correctness and compares AUC against classical BKT.
+                        </p>
+                    </div>
+                    <button class="btn btn-secondary" id="train-dkt-btn" style="font-size:0.85rem;">🔄 Run DKT Sequence Evaluation</button>
+                </div>
+
+                <div id="dkt-results-grid" style="display:none;margin-top:1.5rem;">
+                    <div class="stats-grid" style="margin-bottom:1.5rem;">
+                        <div class="stat-card">
+                            <div class="num" id="dkt-auc" style="color:var(--primary);">0.000</div>
+                            <div class="label">DKT ROC AUC (Test)</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="num" id="dkt-acc" style="color:var(--success);">0.0%</div>
+                            <div class="label">DKT Accuracy</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="num" id="bkt-auc" style="color:var(--warning);">0.000</div>
+                            <div class="label">BKT Baseline AUC</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="num" id="dkt-loss" style="color:var(--secondary);">0.000</div>
+                            <div class="label">Final Binary Cross-Entropy</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="card" style="background:rgba(255,255,255,0.02);">
+                            <h4 style="margin-top:0;font-weight:700;">DKT Training Loss Progression</h4>
+                            <div class="chart-container"><canvas id="dkt-loss-chart"></canvas></div>
+                        </div>
+                        <div class="card" style="background:rgba(255,255,255,0.02);">
+                            <h4 style="margin-top:0;font-weight:700;">DKT vs. Classical BKT Metrics Comparison</h4>
+                            <div class="chart-container"><canvas id="dkt-comparison-chart"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Simulation Controls -->
+            <div class="card">
+                <h3 style="margin-top:0;font-weight:700;">3. Tutoring Policy Simulation Study (8,000 Steps)</h3>
+                <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;">
+                    Simulate 200 student trajectories with heterogeneous growth factors and 8,000 interactions. Compares Tabular Q-learning, Deep Q-Networks (DQN), Rule-Based, and Random baselines.
+                </p>
+                <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+                    <button class="btn btn-primary" id="run-sim-btn" disabled>Run 8,000 Step Simulation</button>
+                    <span id="sim-status-text" style="font-weight:600;color:var(--text-muted);">Load dataset to enable simulation.</span>
+                </div>
+            </div>
+
+            <!-- Step 5: Policy Analytics (Charts) -->
+            <div id="simulation-results-section" style="display:none;margin-top:2rem;">
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h4 style="margin-top:0;font-weight:700;">Mean Discounted Reward Curve</h4>
+                        <div class="chart-container"><canvas id="reward-curve-chart"></canvas></div>
+                    </div>
+                    <div class="card">
+                        <h4 style="margin-top:0;font-weight:700;">Cumulative Student Skill Gain</h4>
+                        <div class="chart-container"><canvas id="gain-curve-chart"></canvas></div>
+                    </div>
+                    <div class="card">
+                        <h4 style="margin-top:0;font-weight:700;">Student Accuracy vs Engagement Trade-off</h4>
+                        <div class="chart-container"><canvas id="tradeoff-chart"></canvas></div>
+                    </div>
+                    <div class="card">
+                        <h4 style="margin-top:0;font-weight:700;">Learned Q-Table Policy Heatmap</h4>
+                        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;">Rows: student mastery bins (1-10); Columns: problem difficulty actions (1-5).</p>
+                        <div id="qtable-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer style="margin-top:5rem;border-top:1px solid rgba(255,255,255,0.05);padding:2rem 0;text-align:center;color:var(--text-muted);font-size:0.85rem;">
+            <div><strong>Course Project:</strong> Effective Personalized AI Tutors via LLM-Guided Reinforcement Learning (25CS2107E)</div>
+            <div style="margin-top:0.25rem;"><strong>Submitted By:</strong> Poli Naidu (2510030160) &middot; K.V. Srinath (2510030106) &middot; Abhinay Sai (2510030106)</div>
+            <div style="margin-top:0.25rem;">KL University (KLH) &middot; AI &amp; Intelligent Systems Division, 2026</div>
+        </footer>
+    </div>
+
+    <script src="static/js/sound-fx.js"></script>
+    <script src="static/js/game-store.js"></script>
+    <script src="static/js/dashboard.js"></script>
+</body>
+</html>

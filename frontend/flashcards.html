@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive 3D Flashcards for rapid CS concept review and exam preparation.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127891;</text></svg>">
+    <title>Rapid Flashcards | AI Tutor Platform</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>&#127891; Personalized AI Tutor Platform</h1>
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="study.html">Study Hub</a>
+                <a href="flashcards.html" class="active">Flashcards</a>
+                <a href="tutor.html">Tutor</a>
+                <a href="dashboard.html">Dashboard</a>
+            </nav>
+            <div class="game-hud">
+                <button class="sound-toggle-btn hud-chip" style="cursor:pointer;border:none;" onclick="SoundFX.toggleMute()">🔊 Sound ON</button>
+                <span id="hud-streak" class="hud-chip">&#128293; 0</span>
+                <span id="hud-xp" class="hud-chip">&#9889; 0 XP</span>
+                <span id="hud-level" class="hud-level-badge">&#127793; NOVICE</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- XP Bar -->
+    <div style="padding:0 2rem;">
+        <div class="xp-bar-track" style="margin:0.5rem 0;">
+            <div id="hud-xp-bar-fill" class="xp-bar-fill" style="width:0%"></div>
+        </div>
+    </div>
+
+    <div class="container" style="max-width:850px;">
+        <div style="text-align:center;margin-bottom:2rem;">
+            <h2 style="margin-bottom:0.5rem;font-weight:700;">⚡ Rapid Flashcards Mode</h2>
+            <p style="color:var(--text-muted);font-size:0.95rem;margin:0 auto;max-width:600px;">
+                Accelerate retention before taking tests. Click or press <kbd style="background:rgba(255,255,255,0.07);padding:0.15rem 0.4rem;border-radius:0.3rem;font-family:var(--font-mono);">Space</kbd> to flip. Press <kbd style="background:rgba(255,255,255,0.07);padding:0.15rem 0.4rem;border-radius:0.3rem;font-family:var(--font-mono);">&larr;</kbd> for Needs Practice, <kbd style="background:rgba(255,255,255,0.07);padding:0.15rem 0.4rem;border-radius:0.3rem;font-family:var(--font-mono);">&rarr;</kbd> for Mastered.
+            </p>
+        </div>
+
+        <!-- Topic Pills -->
+        <div class="topic-selector" id="flashcard-topics" style="justify-content:center;margin-bottom:2rem;"></div>
+
+        <!-- Card Progress -->
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+            <span id="card-counter" style="font-family:var(--font-mono);font-size:0.9rem;color:var(--secondary);font-weight:700;">Card 1 / 5</span>
+            <div style="display:flex;gap:0.75rem;">
+                <span id="fc-mastered-count" style="color:var(--success);font-weight:700;font-size:0.85rem;">✓ 0 Mastered</span>
+                <span id="fc-review-count" style="color:var(--warning);font-weight:700;font-size:0.85rem;">↺ 0 Review</span>
+            </div>
+        </div>
+
+        <!-- 3D Flashcard Container -->
+        <div class="flashcard-container" id="flashcard-container" onclick="flipCard()">
+            <div class="flashcard" id="flashcard">
+                <!-- Front -->
+                <div class="flashcard-face flashcard-front">
+                    <span class="fc-badge" id="fc-badge-front">JAVA</span>
+                    <div class="fc-content">
+                        <div class="fc-icon">💡</div>
+                        <h3 id="fc-question" style="font-size:1.4rem;line-height:1.4;margin:1rem 0;">Question loading...</h3>
+                        <p class="fc-tap-hint">&#128070; Click or press Space to reveal answer</p>
+                    </div>
+                </div>
+
+                <!-- Back -->
+                <div class="flashcard-face flashcard-back">
+                    <span class="fc-badge" id="fc-badge-back">ANSWER &amp; CONCEPT</span>
+                    <div class="fc-content">
+                        <div style="font-size:1.8rem;margin-bottom:0.5rem;">🎯</div>
+                        <h3 id="fc-answer" style="color:var(--success);font-size:1.3rem;margin:0 0 0.75rem 0;">Answer here</h3>
+                        <p id="fc-explanation" style="color:var(--text-muted);font-size:0.95rem;line-height:1.6;margin:0;">Explanation here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flashcard Action Buttons -->
+        <div style="display:flex;justify-content:center;gap:1.5rem;margin-top:2rem;flex-wrap:wrap;">
+            <button class="btn btn-secondary" id="btn-needs-practice" onclick="markCard(false)" style="border-color:rgba(244,63,94,0.3);color:var(--danger);">
+                &larr; Needs Practice (↺)
+            </button>
+            <button class="btn btn-secondary" id="btn-flip" onclick="flipCard()">
+                🔄 Flip Card (Space)
+            </button>
+            <button class="btn btn-primary" id="btn-mastered" onclick="markCard(true)" style="box-shadow:0 4px 15px rgba(16,185,129,0.3);background:linear-gradient(135deg,#10b981,#059669);">
+                Mastered &rarr; (+5 XP)
+            </button>
+        </div>
+
+        <!-- Deck Complete Modal / Overlay -->
+        <div class="completion-overlay" id="deck-complete-overlay">
+            <div class="completion-modal">
+                <span class="completion-emoji">&#127881;</span>
+                <div class="completion-title">Deck Completed!</div>
+                <div class="completion-sub" id="deck-summary-text">You reviewed all cards in this topic!</div>
+                <div class="completion-stats">
+                    <div class="c-stat"><span class="c-stat-num" id="deck-stat-mastered">0</span><span class="c-stat-label">Mastered</span></div>
+                    <div class="c-stat"><span class="c-stat-num" id="deck-stat-review">0</span><span class="c-stat-label">Need Review</span></div>
+                    <div class="c-stat"><span class="c-stat-num" id="deck-stat-xp">+25</span><span class="c-stat-label">XP Earned</span></div>
+                </div>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <button class="btn btn-primary" onclick="restartDeck()">🔄 Practice Again</button>
+                    <a href="tutor.html" class="btn btn-secondary" style="text-decoration:none;">Take Tutor Test &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <footer style="margin-top:5rem;border-top:1px solid rgba(255,255,255,0.05);padding:2rem 0;text-align:center;color:var(--text-muted);font-size:0.85rem;">
+            <div><strong>Course Project:</strong> Effective Personalized AI Tutors via LLM-Guided Reinforcement Learning (25CS2107E)</div>
+            <div style="margin-top:0.25rem;"><strong>Submitted By:</strong> Poli Naidu (2510030160) &middot; K.V. Srinath (2510030106) &middot; Abhinay Sai (2510030106)</div>
+            <div style="margin-top:0.25rem;">KL University (KLH) &middot; AI &amp; Intelligent Systems Division, 2026</div>
+        </footer>
+    </div>
+
+    <script src="static/js/sound-fx.js"></script>
+    <script src="static/js/game-store.js"></script>
+    <script src="static/js/flashcards.js"></script>
+</body>
+</html>

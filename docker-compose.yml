@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  ai-tutor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: personalized_ai_tutor
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped

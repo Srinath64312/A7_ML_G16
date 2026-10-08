@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adaptive AI tutor powered by Reinforcement Learning & Deep Knowledge Tracing. Earn XP, build streaks, master skills.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <title>Interactive Tutor | AI Tutor Platform</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🎓 Personalized AI Tutor Platform</h1>
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="study.html">Study Hub</a>
+                <a href="flashcards.html">Flashcards</a>
+                <a href="tutor.html" class="active">Tutor</a>
+                <a href="dashboard.html">Dashboard</a>
+            </nav>
+            <div class="game-hud">
+                <button class="sound-toggle-btn hud-chip" style="cursor:pointer;border:none;" onclick="SoundFX.toggleMute()">🔊 Sound ON</button>
+                <span id="hud-streak" class="hud-chip">🔥 0</span>
+                <span id="hud-xp" class="hud-chip">⚡ 0 XP</span>
+                <span id="hud-level" class="hud-level-badge">🌱 NOVICE</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- XP Bar -->
+    <div style="padding:0 2rem;">
+        <div class="xp-bar-track" style="margin:0.5rem 0;">
+            <div id="hud-xp-bar-fill" class="xp-bar-fill" style="width:0%"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:0.5rem;">
+            <div>
+                <h2 style="margin-bottom:0.25rem;font-weight:700;">Student Practice Mode</h2>
+                <p style="color:var(--text-muted);margin:0;font-size:0.9rem;">Select a track and topic to begin. The RL agent adapts question difficulty inside your Zone of Proximal Development (ZPD). Press <kbd style="background:rgba(255,255,255,0.07);padding:0.15rem 0.4rem;border-radius:0.3rem;font-family:var(--font-mono);font-size:0.8rem;">1</kbd>–<kbd style="background:rgba(255,255,255,0.07);padding:0.15rem 0.4rem;border-radius:0.3rem;font-family:var(--font-mono);font-size:0.8rem;">4</kbd> to select answer, <kbd style="background:rgba(255,255,255,0.07);padding:0.15rem 0.4rem;border-radius:0.3rem;font-family:var(--font-mono);font-size:0.8rem;">Enter</kbd> to submit.</p>
+            </div>
+        </div>
+
+        <!-- Track Selection Tabs -->
+        <div style="display:flex;gap:0.75rem;margin:1rem 0 0.5rem;flex-wrap:wrap;">
+            <button id="track-math-btn" class="btn btn-primary" style="font-size:0.85rem;padding:0.5rem 1.25rem;">
+                📐 ASSISTments Math Benchmark (8 Skills)
+            </button>
+            <button id="track-cs-btn" class="btn btn-secondary" style="font-size:0.85rem;padding:0.5rem 1.25rem;">
+                💻 Computer Science & Systems (6 Topics)
+            </button>
+        </div>
+
+        <div class="topic-selector" id="topic-selector"></div>
+
+        <div class="tutor-layout">
+            <!-- Left: Practice Card -->
+            <div>
+                <div class="card" id="practice-card" style="display:none;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:0.75rem;flex-wrap:wrap;gap:0.5rem;">
+                        <span id="active-topic-badge" style="background:rgba(99,102,241,0.15);color:var(--primary);padding:0.25rem 0.75rem;border-radius:2rem;font-weight:700;font-size:0.85rem;">Linear Equations Graphs</span>
+                        <div style="display:flex;gap:0.5rem;">
+                            <span id="active-difficulty-badge" style="background:rgba(245,158,11,0.15);color:var(--warning);padding:0.25rem 0.75rem;border-radius:2rem;font-weight:700;font-size:0.85rem;">Level 3</span>
+                        </div>
+                    </div>
+
+                    <div class="question-text" id="question-text">Loading question...</div>
+                    <div class="choices-grid" id="choices-grid"></div>
+
+                    <!-- Answer Feedback Panel -->
+                    <div class="feedback-panel" id="feedback-panel">
+                        <div class="feedback-icon" id="feedback-icon"></div>
+                        <div class="feedback-title" id="feedback-title"></div>
+                        <div class="feedback-hint" id="feedback-hint"></div>
+                    </div>
+
+                    <div style="display:flex;gap:1rem;margin-top:1.75rem;flex-wrap:wrap;">
+                        <button class="btn btn-primary" id="submit-btn" disabled>Submit Answer</button>
+                        <button class="btn btn-secondary" id="hint-btn">💡 Hint</button>
+                    </div>
+
+                    <div class="hint-box" id="hint-box">
+                        <div id="hint-text"></div>
+                    </div>
+                </div>
+
+                <div class="card" id="start-tutor-placeholder" style="text-align:center;padding:4rem 2rem;">
+                    <div style="font-size:3.5rem;margin-bottom:1rem;">🎯</div>
+                    <h3>Start Your Personal Learning Path</h3>
+                    <p style="color:var(--text-muted);margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto;">
+                        Select a topic above to begin. The AI adapts each question to your exact skill level using Reinforcement Learning. Earn XP for every correct answer!
+                    </p>
+                    <div style="display:flex;justify-content:center;gap:1.5rem;margin-top:1rem;flex-wrap:wrap;">
+                        <div style="text-align:center;"><span style="font-size:1.5rem;">⚡</span><br><span style="font-size:0.75rem;color:var(--text-muted);">+10 XP correct</span></div>
+                        <div style="text-align:center;"><span style="font-size:1.5rem;">🔥</span><br><span style="font-size:0.75rem;color:var(--text-muted);">Daily streak</span></div>
+                        <div style="text-align:center;"><span style="font-size:1.5rem;">🎖️</span><br><span style="font-size:0.75rem;color:var(--text-muted);">Level up</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Progress Panel -->
+            <div>
+                <div class="card">
+                    <h3 style="margin-top:0;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:0.5rem;margin-bottom:1.5rem;">Student Progress Model</h3>
+
+                    <div style="margin-bottom:1.5rem;">
+                        <label for="policy-select" style="font-size:0.85rem;font-weight:700;display:block;margin-bottom:0.5rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;">Tutor Policy:</label>
+                        <select id="policy-select" style="width:100%;padding:0.75rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:0.5rem;color:var(--text-main);font-weight:600;font-family:var(--font-sans);cursor:pointer;outline:none;">
+                            <option value="Q-Learning" style="background:#0f172a;">Tabular Q-Learning (10 Mastery Bins)</option>
+                            <option value="DQN" style="background:#0f172a;">Deep Q-Network (DQN Replay)</option>
+                            <option value="Rule-Based" style="background:#0f172a;">Pedagogic Rule Heuristic</option>
+                            <option value="Random" style="background:#0f172a;">Random Baseline</option>
+                            <option value="Fixed" style="background:#0f172a;">Fixed-Difficulty Baseline</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom:1.5rem;">
+                        <div style="display:flex;justify-content:space-between;font-size:0.9rem;font-weight:600;margin-bottom:0.5rem;">
+                            <span>Topic Mastery (BKT Posterior)</span>
+                            <span id="mastery-pct">0%</span>
+                        </div>
+                        <div class="mastery-progress-bar">
+                            <div class="mastery-fill" id="mastery-fill"></div>
+                        </div>
+                        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.35rem;">Empirically calibrated Bayesian Knowledge Tracing</p>
+                    </div>
+
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+                        <div class="stat-card" style="padding:0.75rem;text-align:center;">
+                            <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;font-weight:700;">Correct</div>
+                            <div id="correct-count" style="font-size:1.5rem;font-weight:700;color:var(--success);margin-top:0.25rem;">0</div>
+                        </div>
+                        <div class="stat-card" style="padding:0.75rem;text-align:center;">
+                            <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;font-weight:700;">Total</div>
+                            <div id="total-count" style="font-size:1.5rem;font-weight:700;color:var(--text-main);margin-top:0.25rem;">0</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card" style="padding:0.75rem;text-align:center;margin-bottom:1.5rem;border:1px solid rgba(99,102,241,0.2);">
+                        <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;font-weight:700;">Session XP Gained</div>
+                        <div id="session-xp-display" style="font-size:1.5rem;font-weight:800;color:var(--primary);margin-top:0.25rem;">+0 XP</div>
+                    </div>
+
+                    <div style="background:rgba(255,255,255,0.02);padding:1rem;border-radius:0.5rem;border:1px solid rgba(255,255,255,0.05);font-size:0.8rem;color:var(--text-muted);">
+                        <strong style="color:var(--text-main);display:block;margin-bottom:0.25rem;">⚡ Socratic AI Feedback:</strong>
+                        Our RL policy selects next items to optimize continuous student engagement and knowledge gain while keeping the difficulty inside your ZPD.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gamification Toast Notification -->
+    <div id="game-toast" class="game-toast"></div>
+
+    <script src="static/js/game-store.js"></script>
+    <script src="static/js/sound-fx.js"></script>
+    <script src="static/js/app.js"></script>
+</body>
+</html>

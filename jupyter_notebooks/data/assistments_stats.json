@@ -1,0 +1,129 @@
+{
+    "num_interactions": 20000,
+    "num_students": 150,
+    "num_skills": 8,
+    "num_problems": 500,
+    "avg_correctness": 0.5111,
+    "difficulty_distribution": {
+        "Level 1": 3517,
+        "Level 2": 3473,
+        "Level 3": 5962,
+        "Level 4": 3437,
+        "Level 5": 3611
+    },
+    "top_skills": [
+        {
+            "skill_name": "Linear Equations Graphs",
+            "total_interactions": 3066,
+            "avg_correctness": 0.47162426614481406
+        },
+        {
+            "skill_name": "Properties of Exponents",
+            "total_interactions": 2860,
+            "avg_correctness": 0.5045454545454545
+        },
+        {
+            "skill_name": "Addition and Subtraction Fractions",
+            "total_interactions": 2806,
+            "avg_correctness": 0.5103349964362082
+        },
+        {
+            "skill_name": "Area of Circles",
+            "total_interactions": 2526,
+            "avg_correctness": 0.5122723673792557
+        },
+        {
+            "skill_name": "Probability of Independent Events",
+            "total_interactions": 2509,
+            "avg_correctness": 0.5273017138302113
+        },
+        {
+            "skill_name": "Multiplication and Division Integers",
+            "total_interactions": 2360,
+            "avg_correctness": 0.5309322033898305
+        },
+        {
+            "skill_name": "Venn Diagram",
+            "total_interactions": 2060,
+            "avg_correctness": 0.5485436893203883
+        },
+        {
+            "skill_name": "Equation Solving Two Steps",
+            "total_interactions": 1813,
+            "avg_correctness": 0.49696635410921125
+        }
+    ],
+    "empirical_bkt_params": {
+        "Equation Solving Two Steps": {
+            "p_init": 0.506,
+            "p_transit": 0.35,
+            "p_slip": 0.189,
+            "p_guess": 0.226,
+            "avg_response_sec": 12.7,
+            "avg_hints": 0.51
+        },
+        "Probability of Independent Events": {
+            "p_init": 0.511,
+            "p_transit": 0.35,
+            "p_slip": 0.176,
+            "p_guess": 0.247,
+            "avg_response_sec": 12.7,
+            "avg_hints": 0.46
+        },
+        "Area of Circles": {
+            "p_init": 0.455,
+            "p_transit": 0.35,
+            "p_slip": 0.157,
+            "p_guess": 0.244,
+            "avg_response_sec": 12.1,
+            "avg_hints": 0.51
+        },
+        "Venn Diagram": {
+            "p_init": 0.469,
+            "p_transit": 0.35,
+            "p_slip": 0.19,
+            "p_guess": 0.279,
+            "avg_response_sec": 12.5,
+            "avg_hints": 0.45
+        },
+        "Multiplication and Division Integers": {
+            "p_init": 0.483,
+            "p_transit": 0.35,
+            "p_slip": 0.165,
+            "p_guess": 0.245,
+            "avg_response_sec": 11.8,
+            "avg_hints": 0.48
+        },
+        "Properties of Exponents": {
+            "p_init": 0.45,
+            "p_transit": 0.35,
+            "p_slip": 0.152,
+            "p_guess": 0.221,
+            "avg_response_sec": 12.5,
+            "avg_hints": 0.48
+        },
+        "Addition and Subtraction Fractions": {
+            "p_init": 0.45,
+            "p_transit": 0.35,
+            "p_slip": 0.2,
+            "p_guess": 0.222,
+            "avg_response_sec": 12.3,
+            "avg_hints": 0.5
+        },
+        "Linear Equations Graphs": {
+            "p_init": 0.422,
+            "p_transit": 0.35,
+            "p_slip": 0.2,
+            "p_guess": 0.231,
+            "avg_response_sec": 12.4,
+            "avg_hints": 0.53
+        }
+    },
+    "student_performance_bins": {
+        "0-20%": 4,
+        "20-40%": 43,
+        "40-60%": 48,
+        "60-80%": 47,
+        "80-100%": 8
+    }
+}
