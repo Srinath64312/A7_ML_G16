@@ -1,0 +1,1886 @@
+{
+  "topics_math": [
+    "Linear Equations Graphs",
+    "Properties of Exponents",
+    "Addition and Subtraction Fractions",
+    "Area of Circles",
+    "Probability of Independent Events",
+    "Multiplication and Division Integers",
+    "Venn Diagram",
+    "Equation Solving Two Steps"
+  ],
+  "topics_cs": [
+    "Java",
+    "DSA",
+    "Front-End",
+    "DBMS",
+    "Computer Networks",
+    "Operating Systems"
+  ],
+  "all_topics": [
+    "Java",
+    "DSA",
+    "Front-End",
+    "DBMS",
+    "Computer Networks",
+    "Operating Systems",
+    "Linear Equations Graphs",
+    "Properties of Exponents",
+    "Addition and Subtraction Fractions",
+    "Area of Circles",
+    "Probability of Independent Events",
+    "Multiplication and Division Integers",
+    "Venn Diagram",
+    "Equation Solving Two Steps"
+  ],
+  "questions": {
+    "Linear Equations Graphs": [
+      {
+        "id": "leg_1_1",
+        "difficulty": 1,
+        "question": "What is the slope (m) of the linear equation y = 4x - 7?",
+        "choices": [
+          "4",
+          "-7",
+          "7",
+          "1/4"
+        ],
+        "answer": "4",
+        "hint": "In slope-intercept form y = mx + b, the coefficient in front of x is the slope m."
+      },
+      {
+        "id": "leg_1_2",
+        "difficulty": 1,
+        "question": "What is the y-intercept of the line given by y = -3x + 8?",
+        "choices": [
+          "(0, 8)",
+          "(0, -3)",
+          "(8, 0)",
+          "(-3, 0)"
+        ],
+        "answer": "(0, 8)",
+        "hint": "The y-intercept occurs where x = 0, giving y = b = 8."
+      },
+      {
+        "id": "leg_2_1",
+        "difficulty": 2,
+        "question": "Find the slope of the line passing through the points (2, 3) and (6, 11).",
+        "choices": [
+          "2",
+          "4",
+          "1/2",
+          "8"
+        ],
+        "answer": "2",
+        "hint": "Slope formula: m = (y2 - y1) / (x2 - x1) = (11 - 3) / (6 - 2) = 8 / 4 = 2."
+      },
+      {
+        "id": "leg_2_2",
+        "difficulty": 2,
+        "question": "Which line is parallel to y = 5x + 2?",
+        "choices": [
+          "y = 5x - 9",
+          "y = -1/5x + 2",
+          "y = -5x + 2",
+          "y = 1/5x - 4"
+        ],
+        "answer": "y = 5x - 9",
+        "hint": "Parallel lines share the exact same slope m = 5."
+      },
+      {
+        "id": "leg_3_1",
+        "difficulty": 3,
+        "question": "What is the equation of the line perpendicular to y = -2x + 4 passing through (0, 0)?",
+        "choices": [
+          "y = 1/2x",
+          "y = -1/2x",
+          "y = 2x",
+          "y = -2x"
+        ],
+        "answer": "y = 1/2x",
+        "hint": "Perpendicular slopes are negative reciprocals: m_perp = -1 / (-2) = 1/2."
+      },
+      {
+        "id": "leg_3_2",
+        "difficulty": 3,
+        "question": "Convert the standard equation 3x + 2y = 12 into slope-intercept form.",
+        "choices": [
+          "y = -3/2x + 6",
+          "y = 3/2x + 6",
+          "y = -3x + 12",
+          "y = -2/3x + 4"
+        ],
+        "answer": "y = -3/2x + 6",
+        "hint": "Solve for y: 2y = -3x + 12 => y = (-3/2)x + 6."
+      },
+      {
+        "id": "leg_4_1",
+        "difficulty": 4,
+        "question": "Find the point of intersection between the lines y = 2x + 1 and y = -x + 7.",
+        "choices": [
+          "(2, 5)",
+          "(3, 4)",
+          "(1, 3)",
+          "(2, 7)"
+        ],
+        "answer": "(2, 5)",
+        "hint": "Set 2x + 1 = -x + 7 => 3x = 6 => x = 2, then y = 2(2) + 1 = 5."
+      },
+      {
+        "id": "leg_4_2",
+        "difficulty": 4,
+        "question": "What is the x-intercept of the linear equation 4x - 6y = 24?",
+        "choices": [
+          "(6, 0)",
+          "(-4, 0)",
+          "(0, -4)",
+          "(0, 6)"
+        ],
+        "answer": "(6, 0)",
+        "hint": "Set y = 0: 4x - 6(0) = 24 => 4x = 24 => x = 6."
+      },
+      {
+        "id": "leg_5_1",
+        "difficulty": 5,
+        "question": "A line passes through (3, -2) and is perpendicular to 2x - 5y = 10. What is its equation in point-slope form?",
+        "choices": [
+          "y + 2 = -5/2(x - 3)",
+          "y - 2 = 5/2(x + 3)",
+          "y + 2 = 2/5(x - 3)",
+          "y - 3 = -5/2(x + 2)"
+        ],
+        "answer": "y + 2 = -5/2(x - 3)",
+        "hint": "Slope of 2x - 5y = 10 is 2/5. Perpendicular slope is -5/2. Point-slope: y - y1 = m(x - x1)."
+      },
+      {
+        "id": "leg_5_2",
+        "difficulty": 5,
+        "question": "For what value of k will the system of equations 2x + ky = 6 and 4x + 6y = 12 have infinitely many solutions?",
+        "choices": [
+          "k = 3",
+          "k = 6",
+          "k = -3",
+          "k = 2"
+        ],
+        "answer": "k = 3",
+        "hint": "Infinitely many solutions occur when coefficients are proportional: 2/4 = k/6 = 6/12 => 1/2 = k/6 => k = 3."
+      }
+    ],
+    "Properties of Exponents": [
+      {
+        "id": "exp_1_1",
+        "difficulty": 1,
+        "question": "Simplify x^3 * x^5.",
+        "choices": [
+          "x^8",
+          "x^15",
+          "x^2",
+          "2x^8"
+        ],
+        "answer": "x^8",
+        "hint": "Product rule: x^a * x^b = x^(a + b) => x^(3 + 5) = x^8."
+      },
+      {
+        "id": "exp_1_2",
+        "difficulty": 1,
+        "question": "What is the value of any non-zero number raised to the power of 0 (e.g., 7^0)?",
+        "choices": [
+          "1",
+          "0",
+          "7",
+          "undefined"
+        ],
+        "answer": "1",
+        "hint": "Zero exponent rule: a^0 = 1 for any non-zero real number a."
+      },
+      {
+        "id": "exp_2_1",
+        "difficulty": 2,
+        "question": "Simplify (y^4)^3.",
+        "choices": [
+          "y^12",
+          "y^7",
+          "y^64",
+          "3y^4"
+        ],
+        "answer": "y^12",
+        "hint": "Power of a power rule: (y^a)^b = y^(a * b) => y^(4 * 3) = y^12."
+      },
+      {
+        "id": "exp_2_2",
+        "difficulty": 2,
+        "question": "Simplify 2^-3 as a positive fraction.",
+        "choices": [
+          "1/8",
+          "-6",
+          "1/6",
+          "-8"
+        ],
+        "answer": "1/8",
+        "hint": "Negative exponent rule: a^-n = 1 / (a^n) => 1 / (2^3) = 1/8."
+      },
+      {
+        "id": "exp_3_1",
+        "difficulty": 3,
+        "question": "Simplify (3a^2 b^3)^2.",
+        "choices": [
+          "9a^4 b^6",
+          "6a^4 b^6",
+          "9a^4 b^5",
+          "3a^4 b^6"
+        ],
+        "answer": "9a^4 b^6",
+        "hint": "Distribute power: 3^2 * (a^2)^2 * (b^3)^2 = 9a^4 b^6."
+      },
+      {
+        "id": "exp_3_2",
+        "difficulty": 3,
+        "question": "Simplify (x^7 * y^3) / (x^2 * y^5).",
+        "choices": [
+          "x^5 / y^2",
+          "x^9 * y^8",
+          "x^5 * y^2",
+          "x^14 / y^15"
+        ],
+        "answer": "x^5 / y^2",
+        "hint": "Quotient rule: x^(7-2) * y^(3-5) = x^5 * y^-2 = x^5 / y^2."
+      },
+      {
+        "id": "exp_4_1",
+        "difficulty": 4,
+        "question": "Evaluate 16^(3/4).",
+        "choices": [
+          "8",
+          "12",
+          "4",
+          "64"
+        ],
+        "answer": "8",
+        "hint": "Fractional exponent: (16^(1/4))^3 = 2^3 = 8."
+      },
+      {
+        "id": "exp_4_2",
+        "difficulty": 4,
+        "question": "Solve for x: 3^(2x - 1) = 27.",
+        "choices": [
+          "x = 2",
+          "x = 3",
+          "x = 1.5",
+          "x = 4"
+        ],
+        "answer": "x = 2",
+        "hint": "27 = 3^3. Set exponents equal: 2x - 1 = 3 => 2x = 4 => x = 2."
+      },
+      {
+        "id": "exp_5_1",
+        "difficulty": 5,
+        "question": "Simplify the expression: ((2x^-2 y^3) / (4x^4 y^-1))^-2.",
+        "choices": [
+          "4x^12 / y^8",
+          "2x^6 / y^4",
+          "x^12 / (4y^8)",
+          "16x^12 / y^8"
+        ],
+        "answer": "4x^12 / y^8",
+        "hint": "Inside: (1/2) * x^(-2-4) * y^(3-(-1)) = (1/2) x^-6 y^4. Inverting with ^-2: (2)^2 * x^12 * y^-8 = 4x^12 / y^8."
+      },
+      {
+        "id": "exp_5_2",
+        "difficulty": 5,
+        "question": "If 2^a = 5 and 5^b = 8, what is the value of the product a * b?",
+        "choices": [
+          "3",
+          "2",
+          "log2(40)",
+          "13"
+        ],
+        "answer": "3",
+        "hint": "Substitute: (2^a)^b = 8 => 2^(a*b) = 2^3 => a * b = 3."
+      }
+    ],
+    "Addition and Subtraction Fractions": [
+      {
+        "id": "frac_1_1",
+        "difficulty": 1,
+        "question": "Calculate 2/7 + 3/7.",
+        "choices": [
+          "5/7",
+          "5/14",
+          "6/7",
+          "1/7"
+        ],
+        "answer": "5/7",
+        "hint": "Like denominators: Add numerators directly: (2 + 3)/7 = 5/7."
+      },
+      {
+        "id": "frac_1_2",
+        "difficulty": 1,
+        "question": "Calculate 8/9 - 5/9.",
+        "choices": [
+          "1/3",
+          "3/9",
+          "13/9",
+          "3/0"
+        ],
+        "answer": "1/3",
+        "hint": "(8 - 5)/9 = 3/9. Simplify 3/9 by dividing numerator and denominator by 3 to get 1/3."
+      },
+      {
+        "id": "frac_2_1",
+        "difficulty": 2,
+        "question": "Calculate 1/3 + 1/4.",
+        "choices": [
+          "7/12",
+          "2/7",
+          "1/12",
+          "5/12"
+        ],
+        "answer": "7/12",
+        "hint": "LCD of 3 and 4 is 12: 4/12 + 3/12 = 7/12."
+      },
+      {
+        "id": "frac_2_2",
+        "difficulty": 2,
+        "question": "Calculate 3/4 - 1/6.",
+        "choices": [
+          "7/12",
+          "2/2",
+          "1/2",
+          "5/12"
+        ],
+        "answer": "7/12",
+        "hint": "LCD of 4 and 6 is 12: 9/12 - 2/12 = 7/12."
+      },
+      {
+        "id": "frac_3_1",
+        "difficulty": 3,
+        "question": "Calculate 2 1/3 + 1 3/5 as an improper fraction.",
+        "choices": [
+          "59/15",
+          "19/15",
+          "3 4/8",
+          "49/15"
+        ],
+        "answer": "59/15",
+        "hint": "Convert to improper: 7/3 + 8/5 = 35/15 + 24/15 = 59/15."
+      },
+      {
+        "id": "frac_3_2",
+        "difficulty": 3,
+        "question": "Calculate 4 1/2 - 2 2/3.",
+        "choices": [
+          "1 5/6",
+          "2 1/6",
+          "1 1/6",
+          "2 5/6"
+        ],
+        "answer": "1 5/6",
+        "hint": "9/2 - 8/3 = 27/6 - 16/6 = 11/6 = 1 5/6."
+      },
+      {
+        "id": "frac_4_1",
+        "difficulty": 4,
+        "question": "Solve for x: x + 3/8 = 5/6.",
+        "choices": [
+          "11/24",
+          "1/2",
+          "8/14",
+          "19/24"
+        ],
+        "answer": "11/24",
+        "hint": "x = 5/6 - 3/8 = 20/24 - 9/24 = 11/24."
+      },
+      {
+        "id": "frac_4_2",
+        "difficulty": 4,
+        "question": "Simplify: 1/(x) + 2/(x + 1).",
+        "choices": [
+          "(3x + 1)/(x(x + 1))",
+          "3/(2x + 1)",
+          "(2x + 1)/(x(x + 1))",
+          "3/(x(x + 1))"
+        ],
+        "answer": "(3x + 1)/(x(x + 1))",
+        "hint": "Common denominator x(x + 1): (x + 1 + 2x) / (x(x + 1)) = (3x + 1) / (x(x + 1))."
+      },
+      {
+        "id": "frac_5_1",
+        "difficulty": 5,
+        "question": "Simplify the complex rational expression: (1/a - 1/b) / (1/a^2 - 1/b^2).",
+        "choices": [
+          "ab/(a + b)",
+          "1/(a + b)",
+          "ab/(b - a)",
+          "(b - a)/ab"
+        ],
+        "answer": "ab/(a + b)",
+        "hint": "Numerator = (b - a)/(ab). Denominator = (b^2 - a^2)/(a^2 b^2) = (b - a)(b + a)/(a^2 b^2). Dividing gives ab/(a + b)."
+      },
+      {
+        "id": "frac_5_2",
+        "difficulty": 5,
+        "question": "Evaluate the telescoping sum: 1/(1*2) + 1/(2*3) + 1/(3*4) + ... + 1/(99*100).",
+        "choices": [
+          "99/100",
+          "1",
+          "100/99",
+          "1/100"
+        ],
+        "answer": "99/100",
+        "hint": "Partial fraction decomposition: 1/(n(n+1)) = 1/n - 1/(n+1). Sum = (1 - 1/2) + (1/2 - 1/3) + ... + (1/99 - 1/100) = 1 - 1/100 = 99/100."
+      }
+    ],
+    "Area of Circles": [
+      {
+        "id": "cir_1_1",
+        "difficulty": 1,
+        "question": "What is the formula for the area of a circle with radius r?",
+        "choices": [
+          "A = \u03c0 r^2",
+          "A = 2 \u03c0 r",
+          "A = \u03c0 d",
+          "A = 4/3 \u03c0 r^3"
+        ],
+        "answer": "A = \u03c0 r^2",
+        "hint": "Area is proportional to the square of the radius: A = \u03c0 r^2."
+      },
+      {
+        "id": "cir_1_2",
+        "difficulty": 1,
+        "question": "What is the area of a circle with radius r = 5 cm? (Use \u03c0 \u2248 3.14)",
+        "choices": [
+          "78.5 cm^2",
+          "31.4 cm^2",
+          "15.7 cm^2",
+          "25 cm^2"
+        ],
+        "answer": "78.5 cm^2",
+        "hint": "A = 3.14 * 5^2 = 3.14 * 25 = 78.5 cm^2."
+      },
+      {
+        "id": "cir_2_1",
+        "difficulty": 2,
+        "question": "If a circle has a diameter of 14 m, what is its area? (Use \u03c0 = 22/7)",
+        "choices": [
+          "154 m^2",
+          "308 m^2",
+          "44 m^2",
+          "616 m^2"
+        ],
+        "answer": "154 m^2",
+        "hint": "Radius r = d / 2 = 7 m. A = (22/7) * 7^2 = 22 * 7 = 154 m^2."
+      },
+      {
+        "id": "cir_2_2",
+        "difficulty": 2,
+        "question": "What is the area of a semicircle with radius r = 6 cm in terms of \u03c0?",
+        "choices": [
+          "18\u03c0 cm^2",
+          "36\u03c0 cm^2",
+          "6\u03c0 cm^2",
+          "12\u03c0 cm^2"
+        ],
+        "answer": "18\u03c0 cm^2",
+        "hint": "Area of semicircle = (1/2) \u03c0 r^2 = (1/2) * \u03c0 * 36 = 18\u03c0 cm^2."
+      },
+      {
+        "id": "cir_3_1",
+        "difficulty": 3,
+        "question": "If the circumference of a circle is 20\u03c0 cm, what is its area?",
+        "choices": [
+          "100\u03c0 cm^2",
+          "200\u03c0 cm^2",
+          "400\u03c0 cm^2",
+          "20\u03c0 cm^2"
+        ],
+        "answer": "100\u03c0 cm^2",
+        "hint": "C = 2\u03c0r = 20\u03c0 => r = 10 cm. Area A = \u03c0 * 10^2 = 100\u03c0 cm^2."
+      },
+      {
+        "id": "cir_3_2",
+        "difficulty": 3,
+        "question": "Find the area of a circular sector with radius 6 cm and central angle 60\u00b0.",
+        "choices": [
+          "6\u03c0 cm^2",
+          "12\u03c0 cm^2",
+          "36\u03c0 cm^2",
+          "3\u03c0 cm^2"
+        ],
+        "answer": "6\u03c0 cm^2",
+        "hint": "Sector Area = (\u03b8 / 360\u00b0) * \u03c0 r^2 = (60/360) * \u03c0 * 36 = (1/6) * 36\u03c0 = 6\u03c0 cm^2."
+      },
+      {
+        "id": "cir_4_1",
+        "difficulty": 4,
+        "question": "A circular ring (annulus) has outer radius R = 10 cm and inner radius r = 6 cm. What is its area?",
+        "choices": [
+          "64\u03c0 cm^2",
+          "16\u03c0 cm^2",
+          "136\u03c0 cm^2",
+          "100\u03c0 cm^2"
+        ],
+        "answer": "64\u03c0 cm^2",
+        "hint": "Annulus Area = \u03c0(R^2 - r^2) = \u03c0(100 - 36) = 64\u03c0 cm^2."
+      },
+      {
+        "id": "cir_4_2",
+        "difficulty": 4,
+        "question": "If the radius of a circle increases by 50%, by what percentage does its area increase?",
+        "choices": [
+          "125%",
+          "50%",
+          "100%",
+          "225%"
+        ],
+        "answer": "125%",
+        "hint": "A_new = \u03c0 (1.5 r)^2 = 2.25 \u03c0 r^2 = 2.25 A_old => increase of 125%."
+      },
+      {
+        "id": "cir_5_1",
+        "difficulty": 5,
+        "question": "A square of side length s = 8 cm is inscribed inside a circle. What is the area of the region inside the circle but outside the square?",
+        "choices": [
+          "32\u03c0 - 64 cm^2",
+          "64\u03c0 - 64 cm^2",
+          "16\u03c0 - 64 cm^2",
+          "32\u03c0 - 32 cm^2"
+        ],
+        "answer": "32\u03c0 - 64 cm^2",
+        "hint": "Diagonal of square d = 8\u221a2, so circle radius r = 4\u221a2. Circle Area = \u03c0(4\u221a2)^2 = 32\u03c0. Square Area = 64. Region = 32\u03c0 - 64."
+      },
+      {
+        "id": "cir_5_2",
+        "difficulty": 5,
+        "question": "Three identical coins of radius r are placed mutually tangent on a table. What is the area of the enclosed void region between them?",
+        "choices": [
+          "(\u221a3 - \u03c0/2) r^2",
+          "(2\u221a3 - \u03c0) r^2",
+          "(\u221a3/4 - \u03c0/6) r^2",
+          "(1 - \u03c0/4) r^2"
+        ],
+        "answer": "(\u221a3 - \u03c0/2) r^2",
+        "hint": "Centers form an equilateral triangle with side 2r: Triangle Area = (\u221a3/4)(2r)^2 = \u221a3 r^2. Three 60\u00b0 sectors total 180\u00b0 = (1/2)\u03c0 r^2. Void = (\u221a3 - \u03c0/2) r^2."
+      }
+    ],
+    "Probability of Independent Events": [
+      {
+        "id": "prob_1_1",
+        "difficulty": 1,
+        "question": "What is the probability of flipping a fair coin and getting Heads?",
+        "choices": [
+          "1/2",
+          "1/4",
+          "1",
+          "0"
+        ],
+        "answer": "1/2",
+        "hint": "A fair coin has 2 equally likely outcomes: P(H) = 1/2 = 0.5."
+      },
+      {
+        "id": "prob_1_2",
+        "difficulty": 1,
+        "question": "What is the probability of rolling a 6 on a fair standard 6-sided die?",
+        "choices": [
+          "1/6",
+          "1/2",
+          "1/3",
+          "5/6"
+        ],
+        "answer": "1/6",
+        "hint": "1 favorable outcome out of 6 possible faces: P(6) = 1/6."
+      },
+      {
+        "id": "prob_2_1",
+        "difficulty": 2,
+        "question": "If you roll a die and flip a coin, what is the probability of getting a 4 and Heads?",
+        "choices": [
+          "1/12",
+          "1/8",
+          "2/8",
+          "1/3"
+        ],
+        "answer": "1/12",
+        "hint": "Independent events: P(A and B) = P(A) * P(B) = (1/6) * (1/2) = 1/12."
+      },
+      {
+        "id": "prob_2_2",
+        "difficulty": 2,
+        "question": "What is the probability of flipping Heads two times in a row with a fair coin?",
+        "choices": [
+          "1/4",
+          "1/2",
+          "1/8",
+          "3/4"
+        ],
+        "answer": "1/4",
+        "hint": "P(H1 and H2) = 1/2 * 1/2 = 1/4."
+      },
+      {
+        "id": "prob_3_1",
+        "difficulty": 3,
+        "question": "Bag A contains 3 red and 2 blue marbles. Bag B contains 4 red and 6 blue marbles. One marble is drawn from each bag. What is P(both red)?",
+        "choices": [
+          "6/25 (24%)",
+          "12/50",
+          "7/15",
+          "1/5"
+        ],
+        "answer": "6/25 (24%)",
+        "hint": "P(Red A) = 3/5. P(Red B) = 4/10 = 2/5. P(both Red) = (3/5) * (2/5) = 6/25 = 24%."
+      },
+      {
+        "id": "prob_3_2",
+        "difficulty": 3,
+        "question": "What is the probability of rolling two standard dice and getting a sum of 7?",
+        "choices": [
+          "1/6",
+          "1/12",
+          "7/36",
+          "1/36"
+        ],
+        "answer": "1/6",
+        "hint": "Pairs giving 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) -> 6 out of 36 outcomes = 6/36 = 1/6."
+      },
+      {
+        "id": "prob_4_1",
+        "difficulty": 4,
+        "question": "If the probability of hitting a bullseye is 0.3 on any shot, what is the probability of hitting at least one bullseye in 3 independent shots?",
+        "choices": [
+          "0.657",
+          "0.900",
+          "0.343",
+          "0.027"
+        ],
+        "answer": "0.657",
+        "hint": "P(at least 1) = 1 - P(none) = 1 - (1 - 0.3)^3 = 1 - (0.7)^3 = 1 - 0.343 = 0.657."
+      },
+      {
+        "id": "prob_4_2",
+        "difficulty": 4,
+        "question": "Two independent events A and B have P(A) = 0.4 and P(A \u222a B) = 0.7. What is P(B)?",
+        "choices": [
+          "0.50",
+          "0.30",
+          "0.45",
+          "0.60"
+        ],
+        "answer": "0.50",
+        "hint": "P(A \u222a B) = P(A) + P(B) - P(A)*P(B) => 0.7 = 0.4 + P(B)(1 - 0.4) => 0.3 = 0.6 P(B) => P(B) = 0.50."
+      },
+      {
+        "id": "prob_5_1",
+        "difficulty": 5,
+        "question": "In a communication channel, packets are transmitted independently with error probability p = 0.1. If 10 packets are sent, what is the probability that exactly 2 packets contain errors?",
+        "choices": [
+          "0.1937",
+          "0.2000",
+          "0.0540",
+          "0.3874"
+        ],
+        "answer": "0.1937",
+        "hint": "Binomial distribution: C(10, 2) * (0.1)^2 * (0.9)^8 = 45 * 0.01 * 0.430467 = 0.1937."
+      },
+      {
+        "id": "prob_5_2",
+        "difficulty": 5,
+        "question": "Player A and Player B take turns rolling a fair 6-sided die. The first to roll a 6 wins. If Player A rolls first, what is Player A's probability of winning?",
+        "choices": [
+          "6/11",
+          "1/2",
+          "5/11",
+          "7/12"
+        ],
+        "answer": "6/11",
+        "hint": "Geometric series: P(A wins) = (1/6) / (1 - (5/6)^2) = (1/6) / (1 - 25/36) = (1/6) / (11/36) = 6/11 \u2248 54.55%."
+      }
+    ],
+    "Multiplication and Division Integers": [
+      {
+        "id": "int_1_1",
+        "difficulty": 1,
+        "question": "Calculate (-6) * 4.",
+        "choices": [
+          "-24",
+          "24",
+          "-10",
+          "-2"
+        ],
+        "answer": "-24",
+        "hint": "Negative times positive equals negative: (-6) * 4 = -24."
+      },
+      {
+        "id": "int_1_2",
+        "difficulty": 1,
+        "question": "Calculate (-15) / (-3).",
+        "choices": [
+          "5",
+          "-5",
+          "45",
+          "-45"
+        ],
+        "answer": "5",
+        "hint": "Negative divided by negative equals positive: (-15) / (-3) = 5."
+      },
+      {
+        "id": "int_2_1",
+        "difficulty": 2,
+        "question": "Calculate (-7) * (-8).",
+        "choices": [
+          "56",
+          "-56",
+          "-15",
+          "15"
+        ],
+        "answer": "56",
+        "hint": "Negative times negative yields positive: (-7) * (-8) = 56."
+      },
+      {
+        "id": "int_2_2",
+        "difficulty": 2,
+        "question": "Evaluate (-48) / 6.",
+        "choices": [
+          "-8",
+          "8",
+          "-7",
+          "-9"
+        ],
+        "answer": "-8",
+        "hint": "Negative divided by positive is negative: -48 / 6 = -8."
+      },
+      {
+        "id": "int_3_1",
+        "difficulty": 3,
+        "question": "Calculate (-3) * (-4) * (-5).",
+        "choices": [
+          "-60",
+          "60",
+          "-35",
+          "35"
+        ],
+        "answer": "-60",
+        "hint": "Three negative factors yield a negative product: (-3)*(-4) = +12, then 12*(-5) = -60."
+      },
+      {
+        "id": "int_3_2",
+        "difficulty": 3,
+        "question": "Evaluate (-72) / ((-2) * 3).",
+        "choices": [
+          "12",
+          "-12",
+          "-36",
+          "36"
+        ],
+        "answer": "12",
+        "hint": "Denominator = (-2) * 3 = -6. Then (-72) / (-6) = +12."
+      },
+      {
+        "id": "int_4_1",
+        "difficulty": 4,
+        "question": "Evaluate [(-4)^3 + (-2)^4] / (-8).",
+        "choices": [
+          "6",
+          "-6",
+          "8",
+          "-8"
+        ],
+        "answer": "6",
+        "hint": "(-4)^3 = -64, (-2)^4 = +16. Sum = -48. Then -48 / -8 = 6."
+      },
+      {
+        "id": "int_4_2",
+        "difficulty": 4,
+        "question": "Solve for integer n: (-5) * n + 12 = -38.",
+        "choices": [
+          "n = 10",
+          "n = -10",
+          "n = 5",
+          "n = -5"
+        ],
+        "answer": "n = 10",
+        "hint": "-5n = -38 - 12 = -50 => n = -50 / -5 = 10."
+      },
+      {
+        "id": "int_5_1",
+        "difficulty": 5,
+        "question": "Find the product of all integers x satisfying -5 < x <= 4.",
+        "choices": [
+          "0",
+          "-2880",
+          "2880",
+          "120"
+        ],
+        "answer": "0",
+        "hint": "The integer range includes 0 (specifically x = -4, -3, -2, -1, 0, 1, 2, 3, 4). Any product with factor 0 equals 0."
+      },
+      {
+        "id": "int_5_2",
+        "difficulty": 5,
+        "question": "Evaluate (-1)^1 + (-1)^2 + (-1)^3 + ... + (-1)^101.",
+        "choices": [
+          "-1",
+          "0",
+          "1",
+          "101"
+        ],
+        "answer": "-1",
+        "hint": "Pairs (-1 + 1) = 0 for the first 100 terms. The remaining 101st term is (-1)^101 = -1."
+      }
+    ],
+    "Venn Diagram": [
+      {
+        "id": "venn_1_1",
+        "difficulty": 1,
+        "question": "In set theory, what region does A \u2229 B (intersection) represent?",
+        "choices": [
+          "Elements belonging to BOTH set A and set B",
+          "Elements in A OR B",
+          "Elements in A ONLY",
+          "Elements outside both sets"
+        ],
+        "answer": "Elements belonging to BOTH set A and set B",
+        "hint": "Intersection \u2229 represents common overlap elements shared by both sets."
+      },
+      {
+        "id": "venn_1_2",
+        "difficulty": 1,
+        "question": "What is the cardinality of the empty set \u2205?",
+        "choices": [
+          "0",
+          "1",
+          "undefined",
+          "\u221e"
+        ],
+        "answer": "0",
+        "hint": "The empty set contains zero elements: |\u2205| = 0."
+      },
+      {
+        "id": "venn_2_1",
+        "difficulty": 2,
+        "question": "If set A = {1, 2, 3, 4} and set B = {3, 4, 5, 6}, what is A \u222a B (union)?",
+        "choices": [
+          "{1, 2, 3, 4, 5, 6}",
+          "{3, 4}",
+          "{1, 2, 5, 6}",
+          "{}"
+        ],
+        "answer": "{1, 2, 3, 4, 5, 6}",
+        "hint": "Union combines all distinct elements from both sets."
+      },
+      {
+        "id": "venn_2_2",
+        "difficulty": 2,
+        "question": "In a group of 30 students, 18 play Soccer, 14 play Basketball, and 6 play both. How many play Soccer ONLY?",
+        "choices": [
+          "12",
+          "18",
+          "8",
+          "6"
+        ],
+        "answer": "12",
+        "hint": "Soccer ONLY = Total Soccer - Both = 18 - 6 = 12."
+      },
+      {
+        "id": "venn_3_1",
+        "difficulty": 3,
+        "question": "Using the Principle of Inclusion-Exclusion, if |A| = 25, |B| = 30, and |A \u222a B| = 45, what is |A \u2229 B|?",
+        "choices": [
+          "10",
+          "15",
+          "5",
+          "20"
+        ],
+        "answer": "10",
+        "hint": "|A \u222a B| = |A| + |B| - |A \u2229 B| => 45 = 25 + 30 - |A \u2229 B| => |A \u2229 B| = 55 - 45 = 10."
+      },
+      {
+        "id": "venn_3_2",
+        "difficulty": 3,
+        "question": "In a class of 50 students, 30 take Math, 25 take Physics, and 10 take neither. How many take BOTH Math and Physics?",
+        "choices": [
+          "15",
+          "10",
+          "20",
+          "5"
+        ],
+        "answer": "15",
+        "hint": "Students taking at least one subject = 50 - 10 = 40. Both = 30 + 25 - 40 = 15."
+      },
+      {
+        "id": "venn_4_1",
+        "difficulty": 4,
+        "question": "For a universal set U with |U| = 100, |A| = 40, |B| = 50, and |(A \u222a B)'| = 25. What is |A \u2229 B|?",
+        "choices": [
+          "15",
+          "20",
+          "10",
+          "25"
+        ],
+        "answer": "15",
+        "hint": "|A \u222a B| = 100 - 25 = 75. Then |A \u2229 B| = 40 + 50 - 75 = 15."
+      },
+      {
+        "id": "venn_4_2",
+        "difficulty": 4,
+        "question": "What is the set identity representing (A \u222a B)' according to De Morgan's Laws?",
+        "choices": [
+          "A' \u2229 B'",
+          "A' \u222a B'",
+          "(A \u2229 B)'",
+          "A - B"
+        ],
+        "answer": "A' \u2229 B'",
+        "hint": "De Morgan's first law: The complement of a union is the intersection of complements."
+      },
+      {
+        "id": "venn_5_1",
+        "difficulty": 5,
+        "question": "In a 3-set Venn diagram: |A|=30, |B|=30, |C|=30, pairwise intersections |A\u2229B|=10, |B\u2229C|=10, |A\u2229C|=10, and triple intersection |A\u2229B\u2229C|=5. What is |A \u222a B \u222a C|?",
+        "choices": [
+          "65",
+          "60",
+          "75",
+          "70"
+        ],
+        "answer": "65",
+        "hint": "PIE formula: (30+30+30) - (10+10+10) + 5 = 90 - 30 + 5 = 65."
+      },
+      {
+        "id": "venn_5_2",
+        "difficulty": 5,
+        "question": "In a survey of 100 students, 45 like Python, 40 like Java, 35 like C++, 20 like Python & Java, 15 like Java & C++, 18 like Python & C++, and 10 like all three. How many like EXACTLY TWO languages?",
+        "choices": [
+          "23",
+          "33",
+          "18",
+          "28"
+        ],
+        "answer": "23",
+        "hint": "Exactly two = (|P\u2229J| - 10) + (|J\u2229C| - 10) + (|P\u2229C| - 10) = (20-10) + (15-10) + (18-10) = 10 + 5 + 8 = 23."
+      }
+    ],
+    "Equation Solving Two Steps": [
+      {
+        "id": "eq_1_1",
+        "difficulty": 1,
+        "question": "Solve for x: 2x + 5 = 15.",
+        "choices": [
+          "x = 5",
+          "x = 10",
+          "x = 7.5",
+          "x = 4"
+        ],
+        "answer": "x = 5",
+        "hint": "Subtract 5: 2x = 10. Divide by 2: x = 5."
+      },
+      {
+        "id": "eq_1_2",
+        "difficulty": 1,
+        "question": "Solve for y: 3y - 4 = 11.",
+        "choices": [
+          "y = 5",
+          "y = 7",
+          "y = 15",
+          "y = 3"
+        ],
+        "answer": "y = 5",
+        "hint": "Add 4: 3y = 15. Divide by 3: y = 5."
+      },
+      {
+        "id": "eq_2_1",
+        "difficulty": 2,
+        "question": "Solve for x: x/4 + 6 = 11.",
+        "choices": [
+          "x = 20",
+          "x = 17",
+          "x = 5",
+          "x = 44"
+        ],
+        "answer": "x = 20",
+        "hint": "Subtract 6: x/4 = 5. Multiply by 4: x = 20."
+      },
+      {
+        "id": "eq_2_2",
+        "difficulty": 2,
+        "question": "Solve for n: -4n + 9 = -23.",
+        "choices": [
+          "n = 8",
+          "n = -8",
+          "n = 3.5",
+          "n = -3.5"
+        ],
+        "answer": "n = 8",
+        "hint": "Subtract 9: -4n = -32. Divide by -4: n = 8."
+      },
+      {
+        "id": "eq_3_1",
+        "difficulty": 3,
+        "question": "Solve for x: (2x - 3) / 5 = 7.",
+        "choices": [
+          "x = 19",
+          "x = 16",
+          "x = 38",
+          "x = 11"
+        ],
+        "answer": "x = 19",
+        "hint": "Multiply by 5: 2x - 3 = 35. Add 3: 2x = 38 => x = 19."
+      },
+      {
+        "id": "eq_3_2",
+        "difficulty": 3,
+        "question": "Solve for a: 7 - 3a = 28.",
+        "choices": [
+          "a = -7",
+          "a = 7",
+          "a = -11",
+          "a = 35/3"
+        ],
+        "answer": "a = -7",
+        "hint": "Subtract 7: -3a = 21. Divide by -3: a = -7."
+      },
+      {
+        "id": "eq_4_1",
+        "difficulty": 4,
+        "question": "Solve for x: 3(2x - 4) = 4x + 8.",
+        "choices": [
+          "x = 10",
+          "x = 5",
+          "x = -10",
+          "x = 2"
+        ],
+        "answer": "x = 10",
+        "hint": "Expand: 6x - 12 = 4x + 8 => 2x = 20 => x = 10."
+      },
+      {
+        "id": "eq_4_2",
+        "difficulty": 4,
+        "question": "Solve for x: (x + 2)/3 - (x - 1)/2 = 1.",
+        "choices": [
+          "x = -1",
+          "x = 1",
+          "x = 7",
+          "x = -5"
+        ],
+        "answer": "x = 1",
+        "hint": "Multiply by 6: 2(x + 2) - 3(x - 1) = 6 => 2x + 4 - 3x + 3 = 6 => -x + 7 = 6 => x = 1."
+      },
+      {
+        "id": "eq_5_1",
+        "difficulty": 5,
+        "question": "Solve for x: 5 / (2x - 3) = 2 / (x + 1).",
+        "choices": [
+          "x = -11",
+          "x = 11",
+          "x = 2/3",
+          "x = -1/2"
+        ],
+        "answer": "x = -11",
+        "hint": "Cross-multiply: 5(x + 1) = 2(2x - 3) => 5x + 5 = 4x - 6 => x = -11."
+      },
+      {
+        "id": "eq_5_2",
+        "difficulty": 5,
+        "question": "Solve for x: \u221a(3x + 7) - 4 = 1.",
+        "choices": [
+          "x = 6",
+          "x = 18",
+          "x = 3",
+          "x = 11"
+        ],
+        "answer": "x = 6",
+        "hint": "Isolate root: \u221a(3x + 7) = 5. Square both sides: 3x + 7 = 25 => 3x = 18 => x = 6."
+      }
+    ],
+    "Java": [
+      {
+        "id": "java_1_1",
+        "difficulty": 1,
+        "question": "Which keyword is used to define a class in Java?",
+        "choices": [
+          "class",
+          "Class",
+          "define",
+          "struct"
+        ],
+        "answer": "class",
+        "hint": "Java uses lowercase 'class' keyword. Identifiers and keywords are case-sensitive."
+      },
+      {
+        "id": "java_1_2",
+        "difficulty": 1,
+        "question": "Which primitive data type is used to store boolean truth values in Java?",
+        "choices": [
+          "boolean",
+          "bool",
+          "Boolean_t",
+          "bit"
+        ],
+        "answer": "boolean",
+        "hint": "Java defines the primitive 1-bit logic type explicitly as 'boolean'."
+      },
+      {
+        "id": "java_2_1",
+        "difficulty": 2,
+        "question": "What is the return type of the hashCode() method defined in the Object class?",
+        "choices": [
+          "int",
+          "long",
+          "String",
+          "void"
+        ],
+        "answer": "int",
+        "hint": "The Object base class defines public native int hashCode()."
+      },
+      {
+        "id": "java_2_2",
+        "difficulty": 2,
+        "question": "Which interface must be implemented to allow an object to be sorted using Collections.sort() without a Comparator?",
+        "choices": [
+          "Comparable",
+          "Comparator",
+          "Serializable",
+          "Cloneable"
+        ],
+        "answer": "Comparable",
+        "hint": "Comparable<T> requires overriding the compareTo(T o) method."
+      },
+      {
+        "id": "java_3_1",
+        "difficulty": 3,
+        "question": "What happens when you try to instantiate an abstract class using the 'new' operator?",
+        "choices": [
+          "Compilation error",
+          "Runtime NullPointerException",
+          "A proxy instance is created",
+          "Warning only"
+        ],
+        "answer": "Compilation error",
+        "hint": "Abstract classes are incomplete contracts and cannot be directly instantiated."
+      },
+      {
+        "id": "java_3_2",
+        "difficulty": 3,
+        "question": "Which Garbage Collection algorithm in HotSpot JVM splits the heap into Eden, Survivor (S0/S1), and Tenured spaces?",
+        "choices": [
+          "Generational GC",
+          "Reference Counting GC",
+          "Mark-and-Sweep only",
+          "Stop-the-World Manual GC"
+        ],
+        "answer": "Generational GC",
+        "hint": "Generational hypothesis posits that most allocated objects die young."
+      },
+      {
+        "id": "java_4_1",
+        "difficulty": 4,
+        "question": "What is the memory impact of declaring a variable 'volatile' in Java multithreading?",
+        "choices": [
+          "Guarantees visibility of changes across threads via CPU memory barriers, preventing thread caching",
+          "Acquires an exclusive reentrant mutex lock on the object monitor",
+          "Forces the variable to be allocated strictly on the execution thread stack",
+          "Prevents the variable from ever being serialized or garbage collected"
+        ],
+        "answer": "Guarantees visibility of changes across threads via CPU memory barriers, preventing thread caching",
+        "hint": "Volatile provides happens-before ordering for reads/writes without mutex locking."
+      },
+      {
+        "id": "java_4_2",
+        "difficulty": 4,
+        "question": "In Java Generics, what does the wildcard <? super Integer> specify?",
+        "choices": [
+          "A lower bounded wildcard allowing Integer or any supertype of Integer",
+          "An upper bounded wildcard allowing only subtypes of Integer",
+          "An invariant type restriction allowing only exactly Integer",
+          "A bounded generic type that is erased to Object at runtime"
+        ],
+        "answer": "A lower bounded wildcard allowing Integer or any supertype of Integer",
+        "hint": "Remember the PECS rule: Producer Extends, Consumer Super."
+      },
+      {
+        "id": "java_5_1",
+        "difficulty": 5,
+        "question": "In the Java Memory Model (JMM), how does the 'happens-before' guarantee apply to static class initialization?",
+        "choices": [
+          "The JVM acquires an initialization lock (LC) on the Class object, ensuring safe publication across all threads",
+          "Static fields are assigned on thread-local heap frames and merged during class loading",
+          "A volatile write barrier is injected after every byte-code instruction in the <clinit> method",
+          "Static constructors are executed asynchronously using ForkJoinPool worker threads"
+        ],
+        "answer": "The JVM acquires an initialization lock (LC) on the Class object, ensuring safe publication across all threads",
+        "hint": "Section 12.4.2 of JLS details the 10-step initialization procedure using an internal class initialization lock."
+      },
+      {
+        "id": "java_5_2",
+        "difficulty": 5,
+        "question": "What happens under JVM ClassLoader isolation when two distinct Custom ClassLoaders load the identical .class bytecode file?",
+        "choices": [
+          "Two distinct Class<?> object instances exist; objects of one cannot be cast to the other (ClassCastException)",
+          "The JVM throws a DuplicateClassDefinitionException immediately upon bytecode verification",
+          "The second ClassLoader delegates automatically to the Bootstrap ClassLoader to prevent duplication",
+          "Both instances share the same runtime static fields in Metaspace"
+        ],
+        "answer": "Two distinct Class<?> object instances exist; objects of one cannot be cast to the other (ClassCastException)",
+        "hint": "In Java, a runtime type is uniquely identified by the tuple (ClassLoader instance, fully-qualified class name)."
+      }
+    ],
+    "DSA": [
+      {
+        "id": "dsa_1_1",
+        "difficulty": 1,
+        "question": "What is the average-case time complexity of accessing an element in an array by its index?",
+        "choices": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(1)",
+        "hint": "Arrays use contiguous memory addresses: address = base + index * size."
+      },
+      {
+        "id": "dsa_1_2",
+        "difficulty": 1,
+        "question": "Which data structure operates on a Last-In, First-Out (LIFO) principle?",
+        "choices": [
+          "Stack",
+          "Queue",
+          "Binary Heap",
+          "Linked List"
+        ],
+        "answer": "Stack",
+        "hint": "Think of a stack of plates: the last plate placed on top is the first one removed."
+      },
+      {
+        "id": "dsa_2_1",
+        "difficulty": 2,
+        "question": "What is the worst-case time complexity of searching for an element in a balanced Binary Search Tree (AVL tree)?",
+        "choices": [
+          "O(log n)",
+          "O(n)",
+          "O(n log n)",
+          "O(1)"
+        ],
+        "answer": "O(log n)",
+        "hint": "Balanced trees guarantee height h <= 1.44 log2(n), ensuring logarithmic bounds."
+      },
+      {
+        "id": "dsa_2_2",
+        "difficulty": 2,
+        "question": "Which traversal of a Binary Search Tree (BST) produces elements in strictly ascending sorted order?",
+        "choices": [
+          "In-order (Left, Root, Right)",
+          "Pre-order (Root, Left, Right)",
+          "Post-order (Left, Right, Root)",
+          "Level-order BFS"
+        ],
+        "answer": "In-order (Left, Root, Right)",
+        "hint": "In-order processes left subtree (< root), then root, then right subtree (> root)."
+      },
+      {
+        "id": "dsa_3_1",
+        "difficulty": 3,
+        "question": "What is the worst-case time complexity of Quicksort when the pivot selection consistently chooses the minimum or maximum element?",
+        "choices": [
+          "O(n^2)",
+          "O(n log n)",
+          "O(n)",
+          "O(log n)"
+        ],
+        "answer": "O(n^2)",
+        "hint": "Unbalanced partitions yield recursion depth of n, leading to n * (n-1) / 2 comparisons."
+      },
+      {
+        "id": "dsa_3_2",
+        "difficulty": 3,
+        "question": "Which graph algorithm is specifically designed to find the Shortest Path in a weighted graph with Non-Negative edge weights?",
+        "choices": [
+          "Dijkstra's Algorithm",
+          "Bellman-Ford Algorithm",
+          "Floyd-Warshall Algorithm",
+          "Kruskal's Algorithm"
+        ],
+        "answer": "Dijkstra's Algorithm",
+        "hint": "Dijkstra uses a greedy min-priority queue and requires non-negative edge weights."
+      },
+      {
+        "id": "dsa_4_1",
+        "difficulty": 4,
+        "question": "How does Tarjan's strongly connected components algorithm achieve linear O(V + E) runtime in directed graphs?",
+        "choices": [
+          "Maintains discovery and low-link numbers during a single Depth-First Search traversal with an explicit node stack",
+          "Performs all-pairs dynamic programming over the adjacency matrix using transitive closure",
+          "Executes two consecutive BFS traversals starting from the graph source and sink",
+          "Computes the minimum spanning tree using disjoint-set union-find data structures"
+        ],
+        "answer": "Maintains discovery and low-link numbers during a single Depth-First Search traversal with an explicit node stack",
+        "hint": "Low-link value low[u] is the smallest discovery time reachable from u via tree and back-edges."
+      },
+      {
+        "id": "dsa_4_2",
+        "difficulty": 4,
+        "question": "What is the amortized time complexity of the Union and Find operations in a Disjoint Set Union (DSU) with Path Compression and Union by Rank?",
+        "choices": [
+          "O(\u03b1(n)) \u2014 inverse Ackermann",
+          "O(log n)",
+          "O(1) strictly worst-case",
+          "O(n)"
+        ],
+        "answer": "O(\u03b1(n)) \u2014 inverse Ackermann",
+        "hint": "The inverse Ackermann function \u03b1(n) grows so slowly that \u03b1(n) <= 4 for any practical universe size."
+      },
+      {
+        "id": "dsa_5_1",
+        "difficulty": 5,
+        "question": "In Aho-Corasick string matching, how are failure links (suffix links) constructed across the Trie nodes?",
+        "choices": [
+          "Via Breadth-First Search (BFS) where each node's failure link points to the longest proper suffix node that exists in the trie",
+          "Via recursive Depth-First Search calculating Z-array values along all branch leaves",
+          "By sorting all dictionary strings alphabetically and constructing a suffix automaton",
+          "By computing Knuth-Morris-Pratt (KMP) \u03c0-tables independently for each individual string"
+        ],
+        "answer": "Via Breadth-First Search (BFS) where each node's failure link points to the longest proper suffix node that exists in the trie",
+        "hint": "BFS level-by-level guarantees that failure transitions for shorter prefixes are already established."
+      },
+      {
+        "id": "dsa_5_2",
+        "difficulty": 5,
+        "question": "What is the theoretical amortized cost of the decrease-key operation in a Fibonacci Heap compared to a standard Binary Heap?",
+        "choices": [
+          "O(1) amortized in Fibonacci Heap vs O(log n) in Binary Heap",
+          "O(log n) in both heaps",
+          "O(1) worst-case in Binary Heap vs O(n) in Fibonacci Heap",
+          "O(log log n) in Fibonacci Heap via Van Emde Boas trees"
+        ],
+        "answer": "O(1) amortized in Fibonacci Heap vs O(log n) in Binary Heap",
+        "hint": "Cascading cuts allow Fibonacci Heaps to achieve O(1) amortized decrease-key."
+      }
+    ],
+    "Front-End": [
+      {
+        "id": "fe_1_1",
+        "difficulty": 1,
+        "question": "Which HTML5 semantic tag is recommended for housing independent, self-contained content such as blog posts or news items?",
+        "choices": [
+          "<article>",
+          "<section>",
+          "<div>",
+          "<span>"
+        ],
+        "answer": "<article>",
+        "hint": "<article> represents complete self-contained compositions that can be distributed independently."
+      },
+      {
+        "id": "fe_1_2",
+        "difficulty": 1,
+        "question": "Which CSS layout model provides 1-dimensional layout control along either a row or column axis?",
+        "choices": [
+          "Flexbox",
+          "CSS Grid",
+          "Float layout",
+          "Position absolute"
+        ],
+        "answer": "Flexbox",
+        "hint": "Flexbox is 1-dimensional (row or column), whereas CSS Grid is 2-dimensional (rows and columns)."
+      },
+      {
+        "id": "fe_2_1",
+        "difficulty": 2,
+        "question": "What does the JavaScript Event Loop do when the Call Stack becomes empty?",
+        "choices": [
+          "Pushes tasks from the Microtask Queue first, then Macrotask Queue",
+          "Pushes tasks from the Macrotask Queue first",
+          "Halts execution until user interaction",
+          "Clears the browser cache"
+        ],
+        "answer": "Pushes tasks from the Microtask Queue first, then Macrotask Queue",
+        "hint": "Microtasks (Promises, queueMicrotask) always take precedence and drain completely before macrotasks (setTimeout)."
+      },
+      {
+        "id": "fe_2_2",
+        "difficulty": 2,
+        "question": "Which CSS property enables hardware-accelerated transforms and opacity transitions without triggering browser Layout or Paint reflows?",
+        "choices": [
+          "transform and opacity",
+          "margin and padding",
+          "width and height",
+          "top and left"
+        ],
+        "answer": "transform and opacity",
+        "hint": "Transform and opacity can be composited directly on the GPU without CPU reflow."
+      },
+      {
+        "id": "fe_3_1",
+        "difficulty": 3,
+        "question": "In modern React (v18+), how does the Concurrent Renderer prioritize state updates?",
+        "choices": [
+          "Using lane-based priority scheduling (e.g., Immediate, Normal, Transition)",
+          "Strict FIFO execution queue",
+          "Synchronous blocking renders on the main thread",
+          "Using Web Worker threads exclusively"
+        ],
+        "answer": "Using lane-based priority scheduling (e.g., Immediate, Normal, Transition)",
+        "hint": "useTransition and startTransition assign lower priority lanes so urgent inputs stay responsive."
+      },
+      {
+        "id": "fe_3_2",
+        "difficulty": 3,
+        "question": "What is the purpose of the 'Content-Security-Policy' (CSP) HTTP response header?",
+        "choices": [
+          "Mitigate Cross-Site Scripting (XSS) and data injection attacks by restricting script sources",
+          "Speed up HTTPS TLS handshake latency",
+          "Enable automatic Cross-Origin Resource Sharing (CORS) for all domains",
+          "Compress HTTP payload using Brotli"
+        ],
+        "answer": "Mitigate Cross-Site Scripting (XSS) and data injection attacks by restricting script sources",
+        "hint": "CSP tells the browser which domains are trusted sources for scripts, styles, and images."
+      },
+      {
+        "id": "fe_4_1",
+        "difficulty": 4,
+        "question": "How does the Virtual DOM Reconciliation algorithm in React achieve O(n) heuristic diffing instead of generic O(n^3) tree editing?",
+        "choices": [
+          "Assumes elements of different types generate different trees, and uses stable 'key' props for list elements",
+          "Computes Levenshtein edit distance across serialized HTML strings",
+          "Translates component trees into binary search trees before diffing",
+          "Uses WebAssembly bytecode comparison across component render trees"
+        ],
+        "answer": "Assumes elements of different types generate different trees, and uses stable 'key' props for list elements",
+        "hint": "React's two heuristic assumptions: distinct element types produce new trees, and keys preserve identities."
+      },
+      {
+        "id": "fe_4_2",
+        "difficulty": 4,
+        "question": "In the Web Components standard, what is the key difference between 'open' and 'closed' shadow DOM encapsulation modes?",
+        "choices": [
+          "Open mode allows access via element.shadowRoot from external JavaScript; Closed mode returns null",
+          "Closed mode prevents all CSS styles from loading inside the shadow tree",
+          "Open mode shares the global window and document object namespace",
+          "Closed mode disables DOM event bubbling completely"
+        ],
+        "answer": "Open mode allows access via element.shadowRoot from external JavaScript; Closed mode returns null",
+        "hint": "element.attachShadow({ mode: 'open' }) exposes the root via element.shadowRoot."
+      },
+      {
+        "id": "fe_5_1",
+        "difficulty": 5,
+        "question": "How does the V8 JavaScript engine optimize property access via Hidden Classes (Shapes) and Inline Caching (IC)?",
+        "choices": [
+          "Generates transition trees of hidden classes based on property addition order, caching memory offset pointers at call sites",
+          "Converts all JavaScript objects into flat C++ arrays with static index lookups at compile time",
+          "Stores all object properties in a global synchronized hash table with O(1) lockless reads",
+          "Compiles every object access into a WebAssembly indirect call instruction"
+        ],
+        "answer": "Generates transition trees of hidden classes based on property addition order, caching memory offset pointers at call sites",
+        "hint": "Objects with the same properties added in the same order share Hidden Classes (Shapes)."
+      },
+      {
+        "id": "fe_5_2",
+        "difficulty": 5,
+        "question": "What is the critical architectural difference between HTTP/2 multiplexing and HTTP/3 QUIC transport in terms of packet loss?",
+        "choices": [
+          "HTTP/2 suffers from Head-of-Line (HoL) blocking at the TCP transport layer; HTTP/3 over QUIC/UDP isolates packet loss to the single affected stream",
+          "HTTP/3 uses synchronous TCP keep-alive sockets whereas HTTP/2 uses UDP datagrams",
+          "HTTP/2 eliminates TLS encryption overhead entirely",
+          "HTTP/3 requires server-side rendering while HTTP/2 is client-side only"
+        ],
+        "answer": "HTTP/2 suffers from Head-of-Line (HoL) blocking at the TCP transport layer; HTTP/3 over QUIC/UDP isolates packet loss to the single affected stream",
+        "hint": "QUIC builds streams on UDP so one lost packet only pauses that specific stream."
+      }
+    ],
+    "DBMS": [
+      {
+        "id": "dbms_1_1",
+        "difficulty": 1,
+        "question": "What does the SQL acronym ACID stand for in database transaction management?",
+        "choices": [
+          "Atomicity, Consistency, Isolation, Durability",
+          "Authentication, Concurrency, Integrity, Durability",
+          "Access, Control, Isolation, Distribution",
+          "Array, Cursor, Index, Data"
+        ],
+        "answer": "Atomicity, Consistency, Isolation, Durability",
+        "hint": "ACID guarantees transactional safety: all-or-nothing (Atomicity), valid states (Consistency), concurrency protection (Isolation), persistence (Durability)."
+      },
+      {
+        "id": "dbms_1_2",
+        "difficulty": 1,
+        "question": "Which SQL statement is used to remove a table definition and all its data permanently from the database schema?",
+        "choices": [
+          "DROP TABLE",
+          "DELETE TABLE",
+          "TRUNCATE TABLE",
+          "REMOVE TABLE"
+        ],
+        "answer": "DROP TABLE",
+        "hint": "DROP removes table definition and metadata; TRUNCATE removes rows only."
+      },
+      {
+        "id": "dbms_2_1",
+        "difficulty": 2,
+        "question": "Which normal form requires eliminating partial functional dependencies on candidate keys?",
+        "choices": [
+          "Second Normal Form (2NF)",
+          "First Normal Form (1NF)",
+          "Third Normal Form (3NF)",
+          "Boyce-Codd Normal Form (BCNF)"
+        ],
+        "answer": "Second Normal Form (2NF)",
+        "hint": "1NF requires atomic attributes; 2NF eliminates partial dependency on composite keys."
+      },
+      {
+        "id": "dbms_2_2",
+        "difficulty": 2,
+        "question": "Which index structure is most widely used in relational database engines (PostgreSQL, MySQL InnoDB) for range queries?",
+        "choices": [
+          "B+ Tree",
+          "Hash Index",
+          "Binary Search Tree",
+          "Trie Index"
+        ],
+        "answer": "B+ Tree",
+        "hint": "B+ Trees link all leaf nodes in a doubly-linked list, enabling fast range scans."
+      },
+      {
+        "id": "dbms_3_1",
+        "difficulty": 3,
+        "question": "In relational database concurrency, what is a 'Dirty Read' anomaly?",
+        "choices": [
+          "A transaction reads uncommitted data modified by another concurrent transaction that is later rolled back",
+          "A transaction re-reads a row and finds that values have changed due to committed updates",
+          "A transaction executes a query twice and finds newly inserted rows matching the predicate",
+          "A transaction cannot acquire a read lock due to an active write lock"
+        ],
+        "answer": "A transaction reads uncommitted data modified by another concurrent transaction that is later rolled back",
+        "hint": "Dirty reads occur at READ UNCOMMITTED isolation level when viewing uncommitted intermediate writes."
+      },
+      {
+        "id": "dbms_3_2",
+        "difficulty": 3,
+        "question": "What is the primary advantage of Write-Ahead Logging (WAL) in database recovery management?",
+        "choices": [
+          "Ensures Durability and Atomicity by appending log records to disk before data pages are flushed to storage",
+          "Compresses database tables to use 50% less physical disk space",
+          "Replaces B+ tree indexes with in-memory hash tables",
+          "Eliminates the need for foreign key constraints"
+        ],
+        "answer": "Ensures Durability and Atomicity by appending log records to disk before data pages are flushed to storage",
+        "hint": "WAL writes sequential append-only logs before dirty buffer pool pages are written to tables."
+      },
+      {
+        "id": "dbms_4_1",
+        "difficulty": 4,
+        "question": "How does Multi-Version Concurrency Control (MVCC) eliminate read-write lock contention in modern databases?",
+        "choices": [
+          "Readers never block writers and writers never block readers by maintaining transaction-visible tuple snapshots with xmin/xmax timestamps",
+          "Acquires exclusive table locks for every query before executing",
+          "Converts all SQL queries into asynchronous stored procedures",
+          "Enforces strict two-phase locking (2PL) on every row access"
+        ],
+        "answer": "Readers never block writers and writers never block readers by maintaining transaction-visible tuple snapshots with xmin/xmax timestamps",
+        "hint": "MVCC provides snapshot isolation without acquiring shared read locks."
+      },
+      {
+        "id": "dbms_4_2",
+        "difficulty": 4,
+        "question": "In database normalization, what distinguishes Boyce-Codd Normal Form (BCNF) from Third Normal Form (3NF)?",
+        "choices": [
+          "In BCNF, for every non-trivial functional dependency X -> Y, X must be a superkey; 3NF allows Y to be a prime attribute",
+          "3NF requires multi-valued dependencies to be eliminated; BCNF does not",
+          "BCNF applies only to non-relational document databases",
+          "3NF guarantees zero functional redundancy while BCNF allows transitive dependencies"
+        ],
+        "answer": "In BCNF, for every non-trivial functional dependency X -> Y, X must be a superkey; 3NF allows Y to be a prime attribute",
+        "hint": "3NF has an exception when Y is part of a candidate key (prime attribute); BCNF removes this loophole."
+      },
+      {
+        "id": "dbms_5_1",
+        "difficulty": 5,
+        "question": "In the ARIES (Algorithms for Recovery and Isolation Exploiting Semantics) protocol, what are the three distinct recovery phases executed after a database crash?",
+        "choices": [
+          "Analysis Phase, Redo Phase (Repeating history), Undo Phase (Rolling back active transactions)",
+          "Pre-commit Phase, Two-Phase Commit, Post-Commit Validation",
+          "Log Truncation, Checkpoint Verification, Memory Remapping",
+          "Snapshot Isolation Scan, Deadlock Resolution, B+ Tree Rebalancing"
+        ],
+        "answer": "Analysis Phase, Redo Phase (Repeating history), Undo Phase (Rolling back active transactions)",
+        "hint": "ARIES first scans logs forward (Analysis), repeats history up to crash (Redo), then rolls back losers (Undo)."
+      },
+      {
+        "id": "dbms_5_2",
+        "difficulty": 5,
+        "question": "How does the Raft consensus algorithm handle split-brain leader elections when network partitions occur across database cluster nodes?",
+        "choices": [
+          "Requires a strict majority quorum (e.g., > n/2 nodes) with term numbers and log completeness comparisons to elect a leader",
+          "Assigns leadership statically to the node with the lowest IP address",
+          "Allows multiple leaders simultaneously and resolves conflicts using timestamps",
+          "Reverts all nodes to read-only mode permanently until manual administrator restart"
+        ],
+        "answer": "Requires a strict majority quorum (e.g., > n/2 nodes) with term numbers and log completeness comparisons to elect a leader",
+        "hint": "A candidate must receive votes from a majority (> n/2) of cluster nodes to become leader."
+      }
+    ],
+    "Computer Networks": [
+      {
+        "id": "cn_1_1",
+        "difficulty": 1,
+        "question": "Which layer of the OSI 7-layer model is responsible for end-to-end process-to-process communication, port addressing, and flow control?",
+        "choices": [
+          "Transport Layer (Layer 4)",
+          "Network Layer (Layer 3)",
+          "Data Link Layer (Layer 2)",
+          "Session Layer (Layer 5)"
+        ],
+        "answer": "Transport Layer (Layer 4)",
+        "hint": "Layer 4 (TCP / UDP) handles port numbers and end-to-end process multiplexing."
+      },
+      {
+        "id": "cn_1_2",
+        "difficulty": 1,
+        "question": "What is the standard port number for secure HTTPS web traffic?",
+        "choices": [
+          "443",
+          "80",
+          "8080",
+          "22"
+        ],
+        "answer": "443",
+        "hint": "HTTP uses 80; HTTPS uses 443; SSH uses 22."
+      },
+      {
+        "id": "cn_2_1",
+        "difficulty": 2,
+        "question": "How does the TCP 3-Way Handshake establish a reliable connection between client and server?",
+        "choices": [
+          "SYN -> SYN-ACK -> ACK",
+          "SYN -> ACK -> DATA",
+          "HELLO -> ACK -> CONNECT",
+          "ACK -> SYN -> SYN-ACK"
+        ],
+        "answer": "SYN -> SYN-ACK -> ACK",
+        "hint": "Client sends SYN(x), server responds SYN(y)+ACK(x+1), client responds ACK(y+1)."
+      },
+      {
+        "id": "cn_2_2",
+        "difficulty": 2,
+        "question": "Which protocol translates human-readable domain names (e.g., babuhub.com) into numerical IP addresses?",
+        "choices": [
+          "DNS (Domain Name System)",
+          "DHCP",
+          "ARP",
+          "ICMP"
+        ],
+        "answer": "DNS (Domain Name System)",
+        "hint": "DNS maps domain names to IP addresses."
+      },
+      {
+        "id": "cn_3_1",
+        "difficulty": 3,
+        "question": "What is the primary function of the Address Resolution Protocol (ARP) in local area networks?",
+        "choices": [
+          "Maps a known IPv4 address to a physical Link-Layer MAC address",
+          "Translates private IP addresses to public IPs for NAT",
+          "Resolves domain names to IPv6 addresses",
+          "Assigns IP addresses dynamically upon boot"
+        ],
+        "answer": "Maps a known IPv4 address to a physical Link-Layer MAC address",
+        "hint": "ARP broadcasts 'Who has IP X.X.X.X? Tell MAC Y:Y:Y:Y:Y:Y'."
+      },
+      {
+        "id": "cn_3_2",
+        "difficulty": 3,
+        "question": "In TCP Congestion Control, what happens when a packet loss is detected via 3 Duplicate ACKs (Fast Retransmit)?",
+        "choices": [
+          "Congestion Window (cwnd) is halved (Multiplicative Decrease) and Fast Recovery begins without resetting to 1 MSS",
+          "cwnd is reset immediately to 1 MSS and Slow Start begins from scratch",
+          "The TCP connection is terminated with a RST packet",
+          "The sender ignores packet loss and maintains current sending rate"
+        ],
+        "answer": "Congestion Window (cwnd) is halved (Multiplicative Decrease) and Fast Recovery begins without resetting to 1 MSS",
+        "hint": "TCP Reno halves cwnd on 3 dup ACKs; timeout resets cwnd to 1."
+      },
+      {
+        "id": "cn_4_1",
+        "difficulty": 4,
+        "question": "In the Border Gateway Protocol (BGP), what path vector attribute is used to prevent routing loops across Autonomous Systems (AS)?",
+        "choices": [
+          "AS_PATH attribute containing the ordered list of AS numbers traversed",
+          "Hop Count metric capped at 15 hops",
+          "Link State Advertisements (LSA) sequence numbers",
+          "TTL field in the IP packet header"
+        ],
+        "answer": "AS_PATH attribute containing the ordered list of AS numbers traversed",
+        "hint": "If a router receives a BGP advertisement containing its own AS number in AS_PATH, it rejects it to avoid loops."
+      },
+      {
+        "id": "cn_4_2",
+        "difficulty": 4,
+        "question": "How does TLS 1.3 achieve 1-RTT handshake latency and optional 0-RTT resumption compared to TLS 1.2?",
+        "choices": [
+          "Combines key exchange (Diffie-Hellman parameters) directly into the ClientHello message and eliminates RSA static key exchange",
+          "Disables cryptographic certificate verification during initial connection",
+          "Transmits plaintext data packets during the first handshake exchange",
+          "Uses symmetric AES keys pre-shared across all public DNS root servers"
+        ],
+        "answer": "Combines key exchange (Diffie-Hellman parameters) directly into the ClientHello message and eliminates RSA static key exchange",
+        "hint": "TLS 1.3 sends key shares in ClientHello, reducing handshake round-trips."
+      },
+      {
+        "id": "cn_5_1",
+        "difficulty": 5,
+        "question": "How does Google's BBR (Bottleneck Bandwidth and RTT) congestion control algorithm differ fundamentally from loss-based algorithms like TCP Cubic?",
+        "choices": [
+          "Models the network pipe by estimating max delivery rate (BtlBw) and min round-trip time (RTprop) rather than reacting to packet drop events",
+          "Uses exponential backoff whenever any single packet delay exceeds 10 milliseconds",
+          "Relies entirely on Explicit Congestion Notification (ECN) markings from intermediate routers",
+          "Increases sending window proportionally to the cube root of the elapsed connection time"
+        ],
+        "answer": "Models the network pipe by estimating max delivery rate (BtlBw) and min round-trip time (RTprop) rather than reacting to packet drop events",
+        "hint": "BBR operates at Kleinrock's optimal operating point: max throughput with min queueing delay."
+      },
+      {
+        "id": "cn_5_2",
+        "difficulty": 5,
+        "question": "In Software-Defined Networking (SDN), how does the OpenFlow protocol decouple network functionality?",
+        "choices": [
+          "Separates the Control Plane (logically centralized controller) from the Data Plane (forwarding packet pipeline in hardware switches)",
+          "Replaces IP routing tables with distributed blockchain consensus ledgers",
+          "Converts all Ethernet switches into software-only virtual network interfaces",
+          "Embeds DNS resolution directly into the Physical Layer PHY transceiver chips"
+        ],
+        "answer": "Separates the Control Plane (logically centralized controller) from the Data Plane (forwarding packet pipeline in hardware switches)",
+        "hint": "SDN separates centralized software Control Plane decisions from high-speed hardware Data Plane forwarding."
+      }
+    ],
+    "Operating Systems": [
+      {
+        "id": "os_1_1",
+        "difficulty": 1,
+        "question": "What is the primary core component of an Operating System that manages CPU scheduling, memory allocation, and hardware interrupts?",
+        "choices": [
+          "Kernel",
+          "Shell",
+          "Compiler",
+          "File Manager"
+        ],
+        "answer": "Kernel",
+        "hint": "The kernel is the core operating system program running at all times with ring 0 supervisor privileges."
+      },
+      {
+        "id": "os_1_2",
+        "difficulty": 1,
+        "question": "Which system call in UNIX-like operating systems creates a new process by duplicating the calling process?",
+        "choices": [
+          "fork()",
+          "exec()",
+          "spawn()",
+          "create()"
+        ],
+        "answer": "fork()",
+        "hint": "fork() creates an identical child process with a distinct Process ID (PID)."
+      },
+      {
+        "id": "os_2_1",
+        "difficulty": 2,
+        "question": "What memory resource is shared among all threads executing within the same parent process?",
+        "choices": [
+          "Heap memory and global variables",
+          "Private CPU registers and Program Counter",
+          "Thread Execution Stack",
+          "Thread Local Storage (TLS)"
+        ],
+        "answer": "Heap memory and global variables",
+        "hint": "Threads share code, data, and heap segments within a process, maintaining only private stack frames and registers."
+      },
+      {
+        "id": "os_2_2",
+        "difficulty": 2,
+        "question": "Which CPU scheduling algorithm assigns each ready process a fixed time quantum in cyclic order?",
+        "choices": [
+          "Round Robin (RR)",
+          "First-Come First-Served (FCFS)",
+          "Shortest Job First (SJF)",
+          "Priority Scheduling"
+        ],
+        "answer": "Round Robin (RR)",
+        "hint": "Round Robin uses timer interrupts to preempt processes when their time slice expires."
+      },
+      {
+        "id": "os_3_1",
+        "difficulty": 3,
+        "question": "What is the condition called when an OS spends more CPU cycles swapping pages between RAM and disk than executing instructions?",
+        "choices": [
+          "Thrashing",
+          "Starvation",
+          "Deadlock",
+          "Context Overflow"
+        ],
+        "answer": "Thrashing",
+        "hint": "Thrashing occurs when the working set exceeds physical RAM, causing continuous page faults."
+      },
+      {
+        "id": "os_3_2",
+        "difficulty": 3,
+        "question": "Which condition is NOT one of the four essential Coffman conditions necessary for Deadlock to occur?",
+        "choices": [
+          "Infinite Memory Capacity",
+          "Mutual Exclusion",
+          "Hold and Wait",
+          "Circular Wait"
+        ],
+        "answer": "Infinite Memory Capacity",
+        "hint": "The 4 Coffman conditions are Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait."
+      },
+      {
+        "id": "os_4_1",
+        "difficulty": 4,
+        "question": "Which dedicated hardware component translates virtual memory page addresses into physical RAM frame addresses?",
+        "choices": [
+          "MMU (Memory Management Unit)",
+          "ALU (Arithmetic Logic Unit)",
+          "DMA Controller",
+          "Southbridge"
+        ],
+        "answer": "MMU (Memory Management Unit)",
+        "hint": "The MMU contains the Translation Lookaside Buffer (TLB) cache to speed up virtual-to-physical address translation."
+      },
+      {
+        "id": "os_4_2",
+        "difficulty": 4,
+        "question": "Which non-preemptive CPU scheduling algorithm is mathematically optimal for minimizing average waiting time?",
+        "choices": [
+          "Shortest Job First (SJF)",
+          "First-Come First-Served (FCFS)",
+          "Round Robin (quantum = 10ms)",
+          "Multilevel Feedback Queue"
+        ],
+        "answer": "Shortest Job First (SJF)",
+        "hint": "Scheduling the shortest burst times first minimizes cumulative wait times."
+      },
+      {
+        "id": "os_5_1",
+        "difficulty": 5,
+        "question": "How does Dijkstra's Banker's Algorithm ensure deadlock avoidance in operating systems?",
+        "choices": [
+          "Tests whether allocating requested resources leaves the system in a Safe State",
+          "Preempts all process resources immediately whenever contention occurs",
+          "Restricts each process to accessing at most one resource type",
+          "Disables multiprocessing during I/O operations"
+        ],
+        "answer": "Tests whether allocating requested resources leaves the system in a Safe State",
+        "hint": "A state is Safe if there exists at least one execution sequence where all processes can satisfy their maximum claim and finish."
+      },
+      {
+        "id": "os_5_2",
+        "difficulty": 5,
+        "question": "What is the critical architectural difference between a Hard Real-Time OS and a Soft Real-Time OS?",
+        "choices": [
+          "Hard RTOS treats missing any deadline as a total catastrophic system failure; Soft RTOS tolerates graceful degradation",
+          "Soft RTOS uses hardware microsecond timers; Hard RTOS does not",
+          "Hard RTOS relies heavily on disk swap memory paging",
+          "There is no difference in deadline scheduling"
+        ],
+        "answer": "Hard RTOS treats missing any deadline as a total catastrophic system failure; Soft RTOS tolerates graceful degradation",
+        "hint": "Hard RTOS is used in avionics flight controls where deadline violations cause system failure."
+      }
+    ]
+  }
+}

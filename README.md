@@ -1,7 +1,5 @@
 # 🎓 Effective Personalized AI Tutors via LLM-Guided Reinforcement Learning & Deep Knowledge Tracing
 
-<div align="center">
-
 [![State Level Expo Winner](https://img.shields.io/badge/State%20Level%20ML%20Project%20Expo-2026%20Showcase-gold?style=for-the-badge&logo=trophy)](https://github.com)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![React 18 + TS](https://img.shields.io/badge/Frontend-React%2018%20%7C%20TypeScript-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
@@ -10,8 +8,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 *An End-to-End Intelligent Cognitive Sequencing Architecture powered by Deep Knowledge Tracing (DKT GRU), Bayesian Knowledge Tracing (BKT), 1-PL Item Response Theory (IRT), Deep Q-Networks (DQN), and Socratic AI Guidance.*
-
-</div>
 
 ---
 
